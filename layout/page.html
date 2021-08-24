@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ title }}{{ subtitle }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#333">
+  <link rel="canonical" href="{{ canonical-url }}">
+  <link rel="icon" type="image/png" href="{{ root }}favicon.png">
+  <link rel="stylesheet" href="{{ root }}css/main.css">
+{{ imports }}
+</head>
+<body>
+{{ body }}
+<footer class="textcenter">
+  <hr>
+  <div>
+    <a href="{{ root }}./{{ index }}">Maze</a>
+    <a href="{{ root }}./tags.html">Tags</a>
+    <a href="{{ root }}./rss.xml">Feed</a>
+    <a href="{{ site-url }}../app/subscribe/">Subscribe</a>
+    <a href="{{ root }}about.html">About</a>
+    <a href="https://github.com/susam">GitHub</a>
+    <a href="https://twitter.com/susam">Twitter</a>
+  </div>
+  <p>&copy; 2001&ndash;{{ current-year }} Susam Pal</p>
+</footer>
+</body>
+</html>

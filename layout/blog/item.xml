@@ -1,0 +1,12 @@
+<item>
+<title>{{ title }}</title>
+<link>{{ site-url }}{{ slug }}.html</link>
+<guid>{{ site-url }}{{ slug }}.html</guid>
+<description>
+<![CDATA[
+{{ body }}
+<p><a href="{{ site-url }}{{ slug }}.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>{{ rss-date }}</pubDate>
+</item>
