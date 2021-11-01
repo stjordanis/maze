@@ -1,0 +1,76 @@
+<!-- date: 2021-10-30 20:06:53 +0000 -->
+<!-- name: LP -->
+<p>
+  The quotes around the percent sign are unnecessary. The
+    command <code>:w ! sudo tee %</code> works just fine. I use it
+    everytime!
+</p>
+<!-- date: 2021-11-01 16:00:37 +0000 -->
+<!-- name: Susam Pal -->
+<!-- url: https://susam.in/ -->
+<p>
+  LP,
+</p>
+<p>
+  Like I explained in my blog post, the quotes around the percent sign
+  are necessary to keep the filename as a single argument when the
+  filename contains whitespace. If there is no whitespace in the
+  filename, then the quotes are not necessary.
+</p>
+<p>
+  Here is an experiment that demonstrates the purpose of quotes:
+</p>
+<ol>
+  <li>
+    <p>
+      Enter the following command to create a filename with a space in
+      it and then open it with Vim:
+    </p>
+    <pre><code>sudo touch "foo bar.txt"
+vim "foo bar.txt"</code></pre>
+  </li>
+  <li>
+    <p>
+      In Vim, insert some text with the following key sequence:
+      <kbd>i</kbd> <kbd>hello</kbd> <kbd>&lt;esc&gt;</kbd>.
+    </p>
+  </li>
+  <li>
+    <p>
+      Now enter the following command in Vim to save the file:
+    </p>
+    <pre><code>:w !sudo tee %</code></pre>
+  </li>
+  <li>
+    <p>
+      In another instance of the terminal, enter the following command
+      to check the content of the file:
+    </p>
+    <pre><code>cat "foo bar.txt"</code></pre>
+    <p>
+      The file still appears empty. Nothing was saved to this file.
+    </p>
+  </li>
+  <li>
+    <p>
+      Now enter the following commands:
+    </p>
+    <pre><code>cat foo
+cat bar.txt</code></pre>
+    <p>
+      Both files contain the text <code>hello</code> in them.
+    </p>
+  </li>
+</ol>
+<p>
+  This experiment shows that due to the lack of quotes
+  around <code>%</code>, the command <code>tee %</code> expands
+  to <code>tee foo bar.txt</code> which ends up writing the content of
+  the buffer to both files <code>foo</code> and <code>bar.txt</code>
+  but not to <code>foo bar.txt</code> as we desire.
+</p>
+<p>
+  This is why we need to write <code>tee "%"</code> so that it expands
+  to <code>tee "foo bar.txt"</code> and the content of the buffer is
+  written to the file named <code>foo bar.txt</code>.
+</p>
