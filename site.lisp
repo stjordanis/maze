@@ -306,6 +306,7 @@ value, next-index."
                 (setf next-index (+ begin-tag-index 2)))))
       (format s "~a" (subseq text next-index)))))
 
+
 ;;; Posts
 ;;; -----
 
