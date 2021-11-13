@@ -1,0 +1,141 @@
+<!-- title: Infinitely Nested Dictionary -->
+<!-- tag: programming python -->
+<h2 id="peculiar-result">A Peculiar Result</h2>
+<p>
+  Here is a tiny Python code that creates an infinitely nested
+  dictionary:
+</p>
+<pre>
+<code>a = a['k'] = {}
+
+print(a)
+print(a['k'])
+print(a['k']['k'])
+print(a is a['k'])</code>
+</pre>
+<p>
+  Here is the output:
+</p>
+<pre>
+<code>{'k': {...}}
+{'k': {...}}
+{'k': {...}}
+True</code>
+</pre>
+<p>
+  This output shows that <code>a['k']</code> refers to <code>a</code>
+  itself which makes it infinitely nested. Why does this simple code
+  create an infinitely nested dictionary? Should it not have failed
+  with <code>NameError</code> because <code>a</code> is not yet
+  defined while assigning the empty dictionary to <code>a['k']</code>?
+</p>
+<h2 id="language-reference">The Language Reference</h2>
+<p>
+  My first guess was that the statement
+</p>
+<pre><code>a = a['k'] = {}</code></pre>
+<p>
+  behaves like
+</p>
+<pre>
+<code>new = {}
+a = new
+a['k'] = new</code>
+</pre>
+<p>
+  which would indeed create an infinitely nested dictionary.
+</pre>
+<p>
+  <a href="https://docs.python.org/3.7/reference/simple_stmts.html#assignment-statements">Section
+  7.2 (Assignment statements)</a> of <em>The Python Language
+  Reference</em> confirms this behaviour. Quoting the relevant part
+  from this section here:
+</p>
+<blockquote>
+  <p>
+    Assignment statements are used to (re)bind names to values and to
+    modify attributes or items of mutable objects:
+  </p>
+  <pre>
+<code>assignment_stmt ::=  (target_list "=")+ (starred_expression | yield_expression)
+target_list     ::=  target ("," target)* [","]
+target          ::=  identifier
+                     | "(" [target_list] ")"
+                     | "[" [target_list] "]"
+                     | attributeref
+                     | subscription
+                     | slicing
+                     | "*" target</code>
+</pre>
+  <p>
+    (See
+    section <a href="https://docs.python.org/3.7/reference/expressions.html#primaries">Primaries</a>
+    for the syntax definitions for attributeref, subscription, and
+    slicing.)
+  </p>
+  <p>
+    An assignment statement evaluates the expression list (remember
+    that this can be a single expression or a comma-separated list,
+    the latter yielding a tuple) and assigns the single resulting
+    object to each of the target lists, from left to right.
+  </p>
+</blockquote>
+<p>
+  We see that the assignment statement is defined as follows:
+</p>
+<pre><code>assignment_stmt ::=  (target_list "=")+ (starred_expression | yield_expression)</code></pre>
+<p>
+  Thus the statement
+</p>
+<pre><code>a = a['k'] = {}</code></pre>
+<p>
+  has two <code>target_list</code> elements (<code>a</code>
+  and <code>a['k']</code>) and a <code>starred_expression</code>
+  element (<code>{}</code>). As a result, the same dictionary object
+  is assigned to both <code>a</code> and <code>a['k']</code>, from
+  left to right, i.e., a dictionary is first assigned
+  to <code>a</code>, then a key <code>'k'</code> is inserted within
+  the <em>same</em> dictionary, and finally the value
+  of <code>a['k']</code> is set to the <em>same</em> dictionary. In
+  other words, <code>a['k']</code> is set to <code>a</code> itself.
+</p>
+<h2 id="more-experiments">More Experiments</h2>
+<p>
+  The evaluation of the expression list on the right hand side first
+  and then assigning the result to each target list from left to right
+  explains the behaviour we observed in the previous sections. This
+  left-to-right assignment is quite uncommon among mainstream
+  programming languages. For example, in C, C++, Java, and JavaScript
+  the simple assignment operator (<code>=</code>) has right-to-left
+  associativity. The left-to-right assignment in Python can be further
+  demonstrated with some intentional errors. Here is an example:
+</p>
+<pre>
+<samp>>>> <kbd>a['k'] = a = {}</kbd>
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined</samp>
+</pre>
+<p>
+  In this example, when the assignment to <code>a['k']</code> to
+  occurs, the variable named <code>a</code> is not defined yet, so it
+  leads to <code>NameError</code>.
+</p>
+<p>
+  Here is another example:
+</p>
+<pre>
+<samp>>>> <kbd>a = a['k'] = 10</kbd>
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object does not support item assignment</samp>
+</pre>
+<p>
+  In this example, <code>10</code> is first assigned
+  to <code>a</code>. Then <code>a['k']</code> needs to be evaluated
+  before <code>10</code> can be assigned to it but this evaluation of
+  fails because <code>a</code> is an <code>int</code>, a type that
+  does not support
+  <a href="https://docs.python.org/3.7/reference/expressions.html#subscriptions">subscription</a>,
+  so it fails with <code>TypeError</code>.
+</p>
