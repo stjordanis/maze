@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's Humour Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's Humour Maze</description>
+
+<item>
+<title>OSVDB in GSoC</title>
+<link>https://susam.in/maze/osvdb-in-gsoc.html</link>
+<guid>https://susam.in/maze/osvdb-in-gsoc.html</guid>
+<description>
+<![CDATA[
+<p>
+  The Open Source Vulnerability Database (OSVDB) is participating in
+  Google Summer of Code (GSoC) this year. I have been contributing to
+  OSVDB as a <em>vulnerability mangler</em> since Aug 2006 and
+  analyzing new vulnerabilities being published by security
+  researchers, adding more details to them depending on the nature and
+  severity of the vulnerabilities, and cataloging them. Our internal
+  systems for cataloging vulnerabilities could use some help from more
+  contributors, so it is great that OSVDB is participating in GSoC
+  this year.
+</p>
+<p>
+  Last month we selected some potential contributors from a pile of
+  applications. One of them is Timothy F. Tutt Jr. who will be doing
+  the Researcher Confidence Project for OSVDB.
+</p>
+<p>
+  In the commenting system for OSVDB contributors, Brian Martin a.k.a.
+  Jericho, one of the project leaders, wrote this comment that I found
+  quite funny:
+</p>
+<blockquote>
+  Don't think I need to argue how big this is to me, given the time I
+  spend arguing with researchers and vendors. If we approve this and I
+  am not the mentor, I will feed Jake to a woodchipper.
+</blockquote>
+
+<p><a href="https://susam.in/maze/osvdb-in-gsoc.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Fri, 27 Apr 2007 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

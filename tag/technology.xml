@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's Technology Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's Technology Maze</description>
+
+<item>
+<title>May the Forth Be With You</title>
+<link>https://susam.in/maze/may-the-forth-be-with-you.html</link>
+<guid>https://susam.in/maze/may-the-forth-be-with-you.html</guid>
+<description>
+<![CDATA[
+<p>
+  I wrote a tiny Forth program today to celebrate the Star Wars Day!
+  Today, i.e., May 4 is the Star Wars Day. The date (May the fourth)
+  is a pun on the popular Star Wars catchphrase, "May the Force be
+  with you." Forth, the programming language, is named so as a
+  shortened form of the word "Fourth". The name stood for "fourth
+  generation". Quoting
+  from <a href="https://web.archive.org/web/20160409083846/http://www.colorforth.com/HOPL.html">Forth
+  - The Early Years</a>:
+</p>
+<blockquote>
+  The file holding the interpreter was labeled FORTH, for 4th (next)
+  generation software - but the operating system restricted file names
+  to 5 characters.
+</blockquote>
+<p>
+  So the Forth program presented in this post to print a slightly
+  altered Star Wars catchphrase using ASCII stars (asterisks) is like
+  a double pun! Or is that a triple pun?
+</p>
+<p>
+  Also, if Yoda were a programmer, I think Forth would be his most
+  favourite programming language. Yoda would say, "A Forth programmer
+  I am. Hrmmm," and he would add two and two with, <code>2 2 +</code>.
+  It just makes a lot of sense to celebrate May the 4th with some
+  Forth programming.
+</p>
+<p>
+  Here is the program I wrote to celebrate the day:
+</p>
+<pre>
+<code>: stars
+   0  do  [char] * emit  loop  ;
+
+: lines
+   0  do  cr  loop  ;
+
+: print
+   dup 40 > if  40 - lines  else
+   dup 20 > if  20 - spaces  else
+      stars
+   then then  ;
+
+: start
+   0  do  print  loop  ;
+
+                      41 11 37 11 36 5 28 41 5 27 5
+                     31 5 27 5 33 5 28 41 5 31 5 27
+                    5 31 5 31  5 28 41 5  33 5 25 5
+                   33 5 30 5 28 41 5 35 5 23 5 35 5
+                  29 5 28 41  5 35 5 23 5 35 5 27 9
+                 26 41 5 35  5 23 5 35  5 26 5 21 5
+                25 41 5 35 5 23 5 35 5 25 5 23 5 24
+               41 5 35 5 24 5 33  5 25 5 25 5 23 41
+              5 35 5  25 5 31 5   25 5 27 5 22 41 5
+             35 5 27 5 27 5 26    5 29 5 21 41 5 35
+            5 30 11 28 5 31 5     43 2 24 2 25 2 25
+           2  26 1 26 1 28 8      23 7 33 41 2 24 2
+          25 2 25 2 25 3 24       3 33 2  22 1 25 2
+         33 41 8 25 2 25 2        24 2 21 2 22 2 21
+        2 29 5 23 7 33 41         2 24 2  25 2 25 2
+       23 2 24 3 23 2 31          2 22 1 25 2 33 41
+      2 24 2  22 8 22 2           22 2 26 1 25 2 24
+     8 23 7 22 11 43 3            27 3 27 3 26 3 28
+    3 26 8  35 3 41 3             27 3 27 3 27 3 27
+   3  24 3 26 3 33 3              41 3 27 3 27 3 28
+  3 26 3 23 3  28 3               32 3 41 3 27 3 27
+ 3 29 3  25 3 22 3                30 3 31  3  41 13
+27 3  29 11  22 3 30 3 25 9 41 13 27 3 27 13 22 3 30 3 25 9
+41 3 27 3 27 3 26 3 28 3  22 3 30 3 31 3  41 3 27 3 27 3 26
+3 28 3 23 3 28 3 32 3 41 3 27 3 22 13 22 13 24 4 25 3 23 13
+41 3 27 3 22 13 24 11  26 8 25 13 43 11 22 8 22 2 24 2 25 2
+30 2 23 2 25 2 22 2 23 1 23 2 41 2 22 2 24 2 25 2 30 2 24 7
+23 2 22 3 22 2 41 5 22 8 25 2 29 4 24 2 21 2 24 2 21 2 21 2
+                                  21  2 41 2  22  2
+                                  24 2 25 2 28 2 22
+                                  2 24 3 25 4 23  4
+                                  41  8 22 2  24  2
+                                  22 8 24 2 24 2 24
+                                  1  26 3 25  3 473
+start
+bye</code>
+</pre>
+<p>
+  Here is the output:
+</p>
+<pre>
+<samp>***     ***      *    **    **    ********  **    **  ********
+****   ****     ***    **  **        **     **    **  **
+** ** ** **    ** **    ****         **     ********  *****
+**  ***  **   *******    **          **     **    **  **
+**   *   **  **     **   **          **     **    **  ********  ***********
+
+
+*************     ********      ***********    *************  ***       ***
+*************   ***     ****    *************  *************  ***       ***
+***            ***        ***   ***        ***      ***       ***       ***
+***           ***          ***  ***        ***      ***       ***       ***
+*********     ***          ***  *************       ***       *************
+*********     ***          ***  ***********         ***       *************
+***           ***          ***  ***     ***         ***       ***       ***
+***            ***        ***   ***      ***        ***       ***       ***
+***             ***      ***    ***       ***       ***       ***       ***
+***               ********      ***        ***      ***       ***       ***
+
+
+***********  *******   ********    **     *      **  **  ********  **    **
+             **     *  **           **   ***    **   **     **     **    **
+             *******   *****         ** **  ** **    **     **     ********
+             **     *  **             ***    ***     **     **     **    **
+             *******   ********        *      *      **     **     **    **
+
+
+*****           *****        ***********          *****               *****
+ *****         *****      *****       *****       *****               *****
+  *****       *****     *****           *****     *****               *****
+   *****     *****     *****             *****    *****               *****
+    *****   *****     *****               *****   *****               *****
+     ***** *****      *****               *****   *****               *****
+      *********       *****               *****   *****               *****
+        *****         *****               *****   *****               *****
+        *****          *****             *****     *****             *****
+        *****           *****           *****       *****           *****
+        *****             *****       *****           *****       *****
+        *****                ***********                 ***********</samp>
+</pre>
+<p>
+  To run this program on your system and obtain the above output,
+  follow these steps:
+</p>
+<ol>
+  <li>
+    <p>
+      Install GForth. On macOS, enter the following command if you
+      have Homebrew:
+    </p>
+    <pre><code>brew install gforth</code></pre>
+    <p>
+      On Debian, Ubuntu, or another Debian-based Linux system, enter
+      the following command:
+    </p>
+    <pre><code>sudo apt-get install gforth</code></pre>
+    <p>
+      For other systems or environments,
+      see <a href="https://gforth.org/">gforth.org</a>.
+    </p>
+  </li>
+  <li>
+    <p>
+      Save the above program in a file, say, <code>may4.fs</code> and
+      run it with this command:
+    </p>
+    <pre><code>gforth may4.fs</code></pre>
+  </li>
+  <li>
+    <p>
+      Enjoy!
+    </p>
+  </li>
+</ol>
+<p>
+  If you do not know Forth but found this post fun and want to learn a
+  little bit of Forth,
+  see <a href="https://www.forth.com/starting-forth/">Starting
+  Forth</a>.
+</p>
+<p>
+  The Forth program in this post and the output is also available as a
+  Git repository
+  here: <a href="https://github.com/susam/may4">github.com/susam/may4</a>.
+</p>
+<p>
+  By the way, Forth brings back the fun in computing for me that I
+  once experienced when I began learning to code with Logo. It is
+  simple, distraction-free, and fun! I will conclude this post with a
+  famous quote from Alan J. Perlis:
+</p>
+<blockquote>
+I think that it's extraordinarily important that we in computer
+science keep fun in computing. When it started out, it was an awful
+lot of fun. Of course, the paying customers got shafted every now and
+then, and after a while we began to take their complaints seriously.
+We began to feel as if we really were responsible for the successful,
+error-free perfect use of these machines. I don't think we are. I
+think we're responsible for stretching them, setting them off in new
+directions, and keeping fun in the house. I hope the field of computer
+science never loses its sense of fun.
+</blockquote>    
+
+
+<p><a href="https://susam.in/maze/may-the-forth-be-with-you.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Timing With Curl</title>
+<link>https://susam.in/maze/timing-with-curl.html</link>
+<guid>https://susam.in/maze/timing-with-curl.html</guid>
+<description>
+<![CDATA[
+<p>
+  Here is a command I use often while measuring why an HTTP request is
+  taking too long:
+</p>
+<pre>
+<code>curl -L -w "time_namelookup: %{time_namelookup}
+time_connect: %{time_connect}
+time_appconnect: %{time_appconnect}
+time_pretransfer: %{time_pretransfer}
+time_redirect: %{time_redirect}
+time_starttransfer: %{time_starttransfer}
+time_total: %{time_total}
+" https://example.com/</code>
+</pre>
+<p>
+  Here is the same command written as a one-liner, so that I can copy it easily from this page with a triple-click whenever I need it in future:
+</p>
+<pre><code>curl -L -w "time_namelookup: %{time_namelookup}\ntime_connect: %{time_connect}\ntime_appconnect: %{time_appconnect}\ntime_pretransfer: %{time_pretransfer}\ntime_redirect: %{time_redirect}\ntime_starttransfer: %{time_starttransfer}\ntime_total: %{time_total}\n" https://example.com/</code></pre>
+<p>
+  Here is how the output of the above command typically looks:
+</p>
+<pre>
+<samp>$ <kbd>curl -L -w "namelookup: %{time_namelookup}\nconnect: %{time_connect}\nappconnect: %{time_appconnect}\npretransfer: %{time_pretransfer}\nstarttransfer: %{time_starttransfer}\ntotal: %{time_total}\n" https://example.com/</kbd>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+&lt;html&gt;
+...
+&lt;/html&gt;
+time_namelookup: 0.001403
+time_connect: 0.245464
+time_appconnect: 0.757656
+time_pretransfer: 0.757823
+time_redirect: 0.000000
+time_starttransfer: 0.982111
+time_total: 0.982326</samp>
+</pre>
+<p>
+  In the output above, I have omitted most of the HTML output and
+  replaced the omitted part with ellipsis for the sake of brevity.
+</p>
+<p>
+  The list below provides a description of each number in the output
+  above. This information is picked straight from the manual page of
+  curl 7.20.0. Here are the details:
+</p>
+<ul>
+  <li>
+    <p>
+      <em>time_namelookup:</em> The time, in seconds, it took from the
+      start until the name resolving was completed.
+    </p>
+  </li>
+  <li>
+    <p>
+      <em>time_connect:</em> The time, in seconds, it took from the
+      start until the TCP connect to the remote host (or proxy) was
+      completed.
+    </p>
+  </li>
+  <li>
+    <p>
+      <em>time_appconnect:</em> The time, in seconds, it took from the
+      start until the SSL/SSH/etc connect/handshake to the remote host
+      was completed. (Added in 7.19.0)
+    </p>
+  </li>
+  <li>
+    <p>
+      <em>time_pretransfer:</em> The time, in seconds, it took from
+      the start until the file transfer was just about to begin. This
+      includes all pre-transfer commands and negotiations that are
+      specific to the particular protocol(s) involved.
+    </p>
+  </li>
+  <li>
+    <p>
+      <em>time_redirect:</em> The time, in seconds, it took for all
+      redirection steps include name lookup, connect, pretransfer and
+      transfer before the final transaction was started. time_redirect
+      shows the complete execution time for multiple redirections.
+      (Added in 7.12.3)
+    </p>
+  </li>
+  <li>
+    <p>
+      <em>time_starttransfer:</em> The time, in seconds, it took from
+      the start until the first byte was just about to be transferred.
+      This includes time_pretransfer and also the time the server
+      needed to calculate the result.
+    </p>
+  <li>
+    <p>
+      <em>time_total:</em> The total time, in seconds, that the full
+      operation lasted. The time will be displayed with millisecond
+      resolution.
+    </p>
+  </li>
+</ul>
+<p>
+  An important thing worth noting here is that the difference in the
+  numbers for <code>time_appconnect</code>
+  and <code>time_connect</code> time tells us how much time is spent
+  in SSL/TLS handshake. For a cleartext connection without SSL/TLS,
+  this number is reported as zero. Here is an example output that
+  demonstrates this:
+</p>
+<pre>
+<samp>$ <kbd>curl -L -w "time_namelookup: %{time_namelookup}\ntime_connect: %{time_connect}\ntime_appconnect: %{time_appconnect}\ntime_pretransfer: %{time_pretransfer}\ntime_redirect: %{time_redirect}\ntime_starttransfer: %{time_starttransfer}\ntime_total: %{time_total}\n" http://example.com/</kbd>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+&lt;html&gt;
+...
+&lt;/html&gt;
+time_namelookup: 0.001507
+time_connect: 0.247032
+time_appconnect: 0.000000
+time_pretransfer: 0.247122
+time_redirect: 0.000000
+time_starttransfer: 0.512645
+time_total: 0.512853</samp>
+</pre>
+<p>
+  Also note that <code>time_redirect</code> is zero in both outputs
+  above. That is because no redirection occurs while visiting
+  <a href="https://example.com">example.com</a>. Here is another
+  example that shows how the output looks when a redirection occurs:
+</p>
+<pre>
+<samp>$ <kbd>curl -L -w "time_namelookup: %{time_namelookup}\ntime_connect: %{time_connect}\ntime_appconnect: %{time_appconnect}\ntime_pretransfer: %{time_pretransfer}\ntime_redirect: %{time_redirect}\ntime_starttransfer: %{time_starttransfer}\ntime_total: %{time_total}\n" https://susam.in/blog</kbd>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+...
+&lt;/html&gt;
+time_namelookup: 0.001886
+time_connect: 0.152445
+time_appconnect: 0.465326
+time_pretransfer: 0.465413
+time_redirect: 0.614289
+time_starttransfer: 0.763997
+time_total: 0.765413</samp>
+</pre>
+<p>
+  When faced with a potential latency issue in web services, this is
+  often one of the first commands I run several times from multiple
+  clients because the results form this command help to get a quick
+  sense of the layer that might be responsible for the latency issue.
+</p>
+
+<p><a href="https://susam.in/maze/timing-with-curl.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sat, 10 Jul 2010 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>UID Numbering Scheme</title>
+<link>https://susam.in/maze/uid-numbering-scheme.html</link>
+<guid>https://susam.in/maze/uid-numbering-scheme.html</guid>
+<description>
+<![CDATA[
+<p>
+Some thoughts
+on <a href="http://web.archive.org/web/20100704211109/www.uidai.gov.in/documents/A_UID_Numbering_Scheme.pdf">A
+UID Numbering Scheme</a> published
+by <a href="http://web.archive.org/web/20100523144720/http://uidai.gov.in/">Unique
+    Identification Authority of India (UIDAI)</a>.
+</p>
+<ol>
+  <li>
+    <p>
+      <strong>Process for De-duplication</strong> (page 5):
+    </p>
+    <blockquote>
+      Since biometric information contain no ordering and hence cannot
+      be indexed like text based information, when a resident applies
+      for a UID with his/her fingerprints, iris and photo of face,
+      these biometrics have to be compared against the entire UID
+      database (existing residents with UIDs) to ensure that this new
+      applicant is indeed unique and has not already been allotted a
+      UID (even under a different name, address etc). This 1:N
+      biometric comparison (N=size of the UID database) is the most
+      compute intensive operation of the UID server systeem.
+    </blockquote>
+    <p>
+      It sounds as if the search operation would take O(N) time. Why
+      can't the data be treated as binary numbers that can be ordered
+      and indexed? It'll improve the search time to at least O(log N)
+      time and possibly even further to O(1) time if a hashtable is
+      used. The performance improvement is going to be huge since N is
+      as large as 1.2 billion.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>Memorization of UID</strong> (page 6):
+    </p>
+    <blockquote>
+      This section is about how long the string length should be. In
+      short, the string has to be as short as possible but that meets
+      density requirement and does not include alphabet characters,
+      just numbers. It is important to keep the UID simple and small
+      to help residents to remember their number.
+    </blockquote>
+    <blockquote>
+      Firstly the use of the hindu-arabic numeral
+      system(0,1,2,3,4,5,6,7,8,9) is suggested since these numerals
+      are recognized/used by the largest subset of people in the
+      country. Secondly we suggest the use of 12 digits (11 + 1 check
+      sum) since 11 digits gives us a 100 billion number space which in
+      turn can provide a low density of used numbers.
+    </blockquote>
+    <p>
+      I don't think a 12 digit UID is easy to memorize. However, I
+      agree that this length is necessary to ensure unique UIDs for a
+      large population like India's. The population of India is about
+      1.2 billion now. Now issuing 1.2 billion UIDs from a maximum
+      possible space of 100 billion numbers implies that any UID
+      chosen at random has a 1.2% probability of being a valid UID
+      issued to someone. In other words, 1 out of every 83 possible
+      UID values is a valid UID issued to someone. Therefore, these
+      UIDs should not be treated as secret. It should be assumed that
+      an adversary can easily guess valid UIDs issued to actual
+      residents.
+    </p>
+    <p>
+      Note that this problem gets worse as the population of India
+      grows. Currently, it is growing at the rate of about 1.4% every
+      year. The growth rate is expected to slow down in future. For
+      now, I will assume that the growth rate is never going to exceed
+      1.4% to get a conservative estimate. Then by the year 2050, the
+      population of India would not exceed 2.1 billion. Then the
+      probability that a randomly generated UID is an actual UID
+      issued to a resident would increase to 2.1%.
+    </p>
+    <p>
+      Therefore, any critical operation performed using a UID must
+      perform an independent verification, such as two-factor
+      authentication, SMS-based verification, etc. to ensure that the
+      operation is approved by the actual resident the UID is issued
+      to.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>UID static PIN and dynamic PIN</strong> (page 7):
+    </p>
+    <blockquote>
+      In order to authenticate (ascertain it is who s/he claims to be) a
+      resident needs to provide his/her UID number as well as say a
+      biometric marker – such as a fingerprint.
+    </blockquote>
+    <p>
+      Using biometrics while issuing UIDs may be fine. But using
+      biometrics for other important transactions might put the
+      resident at risk. For example, see this BBC news story:
+      <a href="http://web.archive.org/web/20050528103727/http://news.bbc.co.uk/2/hi/asia-pacific/4396831.stm">Malaysia Car Thieves Steal Finger</a>.
+  </li>
+  <li>
+    <p>
+      <strong>Principles and Requirements</strong> (page 11):
+    </p>
+    <blockquote>
+      Number Generation: The numbers are generated in a random,
+      non-repeating sequence. There are several approaches to doing
+      this in the computer science literature. The algorithm and any
+      "seed" chosen to generate IDs should not be made public and
+      should be considered a national secret.
+    </blockquote>
+    <p>
+      This violates Shannon's maxim, "The enemy knows the system." The
+      security of the system must rely on the secrecy of the seed
+      only. It must not depend on the secrecy of the algorithm.
+      Further, as explained in point 2 above, an adversory can
+      randomly generate 12 digit number with a high likelihood of it
+      being an actual UID to a resident.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>The Checksum</strong> (page 12):
+    </p>
+    <blockquote>
+      There is one scheme that meets our requirements: the Verhoeff
+      Scheme. This scheme is relatively complex, and in the days
+      before ubiquitous computing, there was a tendency to avoid it in
+      favor of simpler schemes. In this day and age however, and at
+      the scale of the UID, precision must be the goal. The Verhoeff
+      scheme catches all single errors and all adjacent
+      transpositions. It also catches >95% of twin errors and >94% of
+      jump transpositions.
+    </blockquote>
+    <p>
+      For those who are curious about what this scheme is, more information can be found at
+      <a href="http://www.cs.utsa.edu/~wagner/laws/verhoeff.html">http://www.cs.utsa.edu/~wagner/laws/verhoeff.html</a>
+      and <a href="http://en.wikipedia.org/wiki/Verhoeff_algorithm">http://en.wikipedia.org/wiki/Verhoeff_algorithm</a>.
+    </p>
+  </li>
+</ol>
+<p>
+  <strong>Update on 31 May 2010:</strong> After an email conversation
+  with Nandan Nilekani about the points I have documented in this blog
+  post, he requested that I send these points in the form a document
+  to him so that he can have it reviewed by his team. I have done so
+  today.
+</p>
+
+<p><a href="https://susam.in/maze/uid-numbering-scheme.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Mon, 24 May 2010 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Vim Sudo Write Trick</title>
+<link>https://susam.in/maze/vim-sudo-write-trick.html</link>
+<guid>https://susam.in/maze/vim-sudo-write-trick.html</guid>
+<description>
+<![CDATA[
+<h2 id="trick">The Trick<a href="#trick"></a></h2>
+<p>
+  You open a file, edit it, and save it only to get the E45 error
+  message that says:
+</p>
+<pre><samp>E45: 'readonly' option is set (add ! to override)</samp></pre>
+<p>
+  You now realize that only root can edit the file. What do you? Start
+  over? No, instead try this:
+</p>
+<pre><code>:w !sudo tee "%"</code></pre>
+<p>
+  I learnt this trick recently from the comment section
+  of <a href="https://web.archive.org/web/20051120054527/http://www.vim.org/tips/tip.php?tip_id=975">Tip #975</a>
+  on the Vim Tips website.
+</p>
+
+<h2 id="explanation">Explanation<a href="#explanation"></a></h2>
+<p>
+  How does the <code>:w !sudo tee "%"</code> trick work? Let us look
+  at the command part-by-part:
+</p>
+<ul>
+  <li>
+    <p><code>:w !{cmd}</code></p>
+    <p>
+      Execute <code>{cmd}</code> with all lines in buffer as standard
+      input.
+    </p>
+  </li>
+  <li>
+    <p><code>"%"</code></p>
+    <p>
+      The <code>%</code> is replaced with the current filename. The
+      quotes around it keeps the filename as a single argument even if
+      it contains whitespace.
+    </p>
+  </li>
+  <li>
+    <p><code>tee {file}</code></p>
+    <p>
+      The <code>tee</code> command is a Unix command (not a Vim
+      command). It copies standard input to standard output
+      and <code>{file}</code>.
+    </p>
+  </li>
+</ul>
+
+<h2 id="more">More Information<a href="#more"></a></h2>
+<p>
+  For more information on this command, enter the following commands
+  in Vim:
+</p>
+<pre>
+<code>:help :w_c
+:help current-file
+:help :_%</code>
+</pre>
+<p>
+  Also, enter the following command in shell:
+</p>
+<pre><code>man tee</code></pre>
+<p>
+  I hope this was fun!
+</p>
+
+<p><a href="https://susam.in/maze/vim-sudo-write-trick.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Thu, 25 Aug 2005 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>cal 9 1752</title>
+<link>https://susam.in/maze/cal-9-1752.html</link>
+<guid>https://susam.in/maze/cal-9-1752.html</guid>
+<description>
+<![CDATA[
+<p>
+  A very interesting thing I came across recently while learning Unix
+  is an apparent gap in the calendar for Sep 1752. Here is how
+  the <code>cal</code> output for this month appears on a Unix or
+  Linux system:
+</p>
+<pre>
+<samp>$ <kbd>cal 9 1752</kbd>
+   September 1752
+Su Mo Tu We Th Fr Sa
+       1  2 14 15 16
+17 18 19 20 21 22 23
+24 25 26 27 28 29 30</samp>
+</pre>
+<p>
+  In the SunOS 5.9 manual page
+  for <a href="https://docs.oracle.com/cd/E19683-01/817-3936/6mjgdbv29/index.html">cal(1)</a>,
+  this gap is explained as follows:
+</p>
+<!-- SunOS 5.9 was released on 28 May 2002 -->
+<blockquote>
+  An unusual calendar is printed for September 1752. That is the month
+  11 days were skipped to make up for lack of leap year adjustments.
+  To see this calendar, type: <code>cal 9 1752</code>
+</blockquote>
+<p>
+  Similarly, FreeBSD 5.0 has the following note in its manual page
+  for <a href="https://www.freebsd.org/cgi/man.cgi?query=cal&sektion=1&manpath=FreeBSD+5.0-RELEASE">cal(1)</a>:
+</p>
+<!-- FreeBSD 5.0-RELEASE was released in Jan 2003 -->
+<blockquote>
+  <p>
+    -s <em>country_code</em>
+  </p>
+  <p style="margin-left: 2em">
+    Assume the switch from Julian to Gregorian Calendar at the date
+    associated with the <em>country_code</em>. If not
+    specified, <strong>ncal</strong> tries to guess the switch date
+    from the local environment or falls back to September 2, 1752.
+    This was when Great Britain and her colonies switched to the
+    Gregorian Calendar.
+  </p>
+</blockquote>
+<p>
+  On investigating this switch from Julian to Gregorian calendar, I
+  learnt that the Julian calendar was introduced by Julius Caesar in
+  46 BC and it remained in effect across most of the Western world
+  from 45 BC to 1582. It assumed an average year to be 365.25 days
+  long. However, the actual solar year has been known to be around
+  365.2422 days since the 17th century. Although the difference
+  appears to be too small, it leads to an error of adding 1 extra day
+  every 128 years. To reduce this error, the Gregorian calendar was
+  introduced in October 1582 by Pope Gregory XIII. It assumed an
+  average year to be 365.2425 days long.
+</p>
+<p>
+  The new calendar was adopted in some European countries where 4 Oct
+  1582 was followed by 15 Oct 1582 thereby skipping 10 days in
+  between. However, it took as long as September 1752 for the new
+  calendar to be adopted by Britain. In Great Britain and the British
+  Empire, 2 Sep 1752 was followed by 14 Sep 1752 and that is the gap
+  of 11 days we see in the <code>cal 9 1752</code> output.
+</p>
+
+<p><a href="https://susam.in/maze/cal-9-1752.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Tue, 14 Sep 2004 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

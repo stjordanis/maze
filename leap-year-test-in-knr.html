@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Leap Year Test in K&amp;R - Susam's Maze</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#333">
+  <link rel="canonical" href="https://susam.in/maze/leap-year-test-in-knr.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<main>
+<h1>Leap Year Test in K&amp;R</h1>
+<div>By <b>Susam Pal</b> on 01 Mar 2020</div>
+<p>
+  I learnt the following test for leap year early in my programming
+  life from the book <em>The C Programming Language, 2nd ed.</em>
+  (K&amp;R) written by Brian Kernighan and Dennis Ritchie about 18
+  years ago during my engineering studies. &sect; 2.5
+  (Arithmetic Operators) of the book uses the following test:
+</p>
+<pre>
+<code>(year % 4 == 0 &amp;&amp; year % 100 != 0) || year % 400 == 0</code>
+</pre>
+<p>
+  By the way, the following test also works:
+</p>
+<pre>
+<code>year % 4 == 0 &amp;&amp; (year % 100 != 0 || year % 400 == 0)</code>
+</pre>
+
+<div><a href="comments/leap-year-test-in-knr.html">Comments</a></div>
+</main>
+
+<footer class="textcenter">
+  <hr>
+  <div>
+    <a href="./">Maze</a>
+    <a href="./tags.html">Tags</a>
+    <a href="./rss.xml">Feed</a>
+    <a href="https://susam.in/maze/../app/subscribe/">Subscribe</a>
+    <a href="about.html">About</a>
+    <a href="/">Home</a>
+    <a href="https://github.com/susam">GitHub</a>
+    <a href="https://twitter.com/susam">Twitter</a>
+  </div>
+  <p>&copy; 2001&ndash;2021 Susam Pal</p>
+</footer>
+</body>
+</html>

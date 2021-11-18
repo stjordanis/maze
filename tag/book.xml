@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's Book Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's Book Maze</description>
+
+<item>
+<title>Pointers in K&amp;R</title>
+<link>https://susam.in/maze/pointers-in-knr.html</link>
+<guid>https://susam.in/maze/pointers-in-knr.html</guid>
+<description>
+<![CDATA[
+<p>
+  I learnt C from the book <em>The C Programming Language, 2nd
+  ed.</em> (K&amp;R) written by Brian Kernighan and Dennis Ritchie
+  about 18 years ago during my engineering studies. The subject of
+  pointers was generally believed to be scary among fellow students
+  and many of them bought pretty fat books that were dedicated solely
+  to the topic of pointers. However, when I reached Chapter 5 of the
+  book , I found that it did a wonderful job at teaching pointers in
+  merely 34 pages. The chapter opens with this sentence:
+</p>
+<blockquote>
+  A pointer is a variable that contains the address of a variable.
+</blockquote>
+<p>
+  The exact point at which the whole topic of pointers became crystal
+  clear was when I encountered this sentence in &sect; 5.3 Pointers
+  and Arrays:
+</p>
+<blockquote>
+  Rather more surprising, at first sight, is the fact that a reference
+  to <code>a[i]</code> can also be written as <code>*(a+i)</code>.
+</blockquote>
+<p>
+  Indeed, it was easy to confirm that by compiling and running the
+  following program:
+</p>
+<pre>
+<code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a[] = {2, 3, 5, 7, 11};
+    printf("%d\n", *(a + 2));
+    printf("%d\n", a[2]);
+    printf("%d\n", 2[a]);
+    return 0;
+}</code>
+</pre>
+<p>
+  The output is:
+</p>
+<pre>
+<samp>5
+5
+5</samp>
+</pre>
+<p>
+  C was the first serious programming language I was learning back
+  then and at that time, I don't think I could have come across a
+  better book than K&amp;R to learn this subject. Like many others, I
+  too feel that this book is a model for technical writing. I wish
+  more technical books were written like this with clear presentation
+  and concise treatment.
+</p>
+
+<p><a href="https://susam.in/maze/pointers-in-knr.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Leap Year Test in K&amp;R</title>
+<link>https://susam.in/maze/leap-year-test-in-knr.html</link>
+<guid>https://susam.in/maze/leap-year-test-in-knr.html</guid>
+<description>
+<![CDATA[
+<p>
+  I learnt the following test for leap year early in my programming
+  life from the book <em>The C Programming Language, 2nd ed.</em>
+  (K&amp;R) written by Brian Kernighan and Dennis Ritchie about 18
+  years ago during my engineering studies. &sect; 2.5
+  (Arithmetic Operators) of the book uses the following test:
+</p>
+<pre>
+<code>(year % 4 == 0 &amp;&amp; year % 100 != 0) || year % 400 == 0</code>
+</pre>
+<p>
+  By the way, the following test also works:
+</p>
+<pre>
+<code>year % 4 == 0 &amp;&amp; (year % 100 != 0 || year % 400 == 0)</code>
+</pre>
+
+<p><a href="https://susam.in/maze/leap-year-test-in-knr.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

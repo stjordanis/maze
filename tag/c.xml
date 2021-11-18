@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's C Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's C Maze</description>
+
+<item>
+<title>Pointers in K&amp;R</title>
+<link>https://susam.in/maze/pointers-in-knr.html</link>
+<guid>https://susam.in/maze/pointers-in-knr.html</guid>
+<description>
+<![CDATA[
+<p>
+  I learnt C from the book <em>The C Programming Language, 2nd
+  ed.</em> (K&amp;R) written by Brian Kernighan and Dennis Ritchie
+  about 18 years ago during my engineering studies. The subject of
+  pointers was generally believed to be scary among fellow students
+  and many of them bought pretty fat books that were dedicated solely
+  to the topic of pointers. However, when I reached Chapter 5 of the
+  book , I found that it did a wonderful job at teaching pointers in
+  merely 34 pages. The chapter opens with this sentence:
+</p>
+<blockquote>
+  A pointer is a variable that contains the address of a variable.
+</blockquote>
+<p>
+  The exact point at which the whole topic of pointers became crystal
+  clear was when I encountered this sentence in &sect; 5.3 Pointers
+  and Arrays:
+</p>
+<blockquote>
+  Rather more surprising, at first sight, is the fact that a reference
+  to <code>a[i]</code> can also be written as <code>*(a+i)</code>.
+</blockquote>
+<p>
+  Indeed, it was easy to confirm that by compiling and running the
+  following program:
+</p>
+<pre>
+<code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a[] = {2, 3, 5, 7, 11};
+    printf("%d\n", *(a + 2));
+    printf("%d\n", a[2]);
+    printf("%d\n", 2[a]);
+    return 0;
+}</code>
+</pre>
+<p>
+  The output is:
+</p>
+<pre>
+<samp>5
+5
+5</samp>
+</pre>
+<p>
+  C was the first serious programming language I was learning back
+  then and at that time, I don't think I could have come across a
+  better book than K&amp;R to learn this subject. Like many others, I
+  too feel that this book is a model for technical writing. I wish
+  more technical books were written like this with clear presentation
+  and concise treatment.
+</p>
+
+<p><a href="https://susam.in/maze/pointers-in-knr.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Leap Year Test in K&amp;R</title>
+<link>https://susam.in/maze/leap-year-test-in-knr.html</link>
+<guid>https://susam.in/maze/leap-year-test-in-knr.html</guid>
+<description>
+<![CDATA[
+<p>
+  I learnt the following test for leap year early in my programming
+  life from the book <em>The C Programming Language, 2nd ed.</em>
+  (K&amp;R) written by Brian Kernighan and Dennis Ritchie about 18
+  years ago during my engineering studies. &sect; 2.5
+  (Arithmetic Operators) of the book uses the following test:
+</p>
+<pre>
+<code>(year % 4 == 0 &amp;&amp; year % 100 != 0) || year % 400 == 0</code>
+</pre>
+<p>
+  By the way, the following test also works:
+</p>
+<pre>
+<code>year % 4 == 0 &amp;&amp; (year % 100 != 0 || year % 400 == 0)</code>
+</pre>
+
+<p><a href="https://susam.in/maze/leap-year-test-in-knr.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>C Standard Terms for Behaviour</title>
+<link>https://susam.in/maze/c-standard-terms-for-behaviour.html</link>
+<guid>https://susam.in/maze/c-standard-terms-for-behaviour.html</guid>
+<description>
+<![CDATA[
+<p>
+  Here are some excerpts from the final drafts of the C99 and C11
+  standards <a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">n1256.pdf</a>
+  and <a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf">n1570.pdf</a>,
+  respectively.
+</p>
+<ul>
+  <li>
+    <p>
+      <strong>§3.4.0: behavior:</strong> external appearance or action
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>§3.4.1: implementation-defined behavior:</strong>
+      unspecified behavior where each implementation documents how the
+      choice is made.
+    </p>
+    <p>
+      EXAMPLE: An example of implementation-defined behavior is the
+      propagation of the high-order bit when a signed integer is
+      shifted right.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>§3.4.2: locale-specific behavior:</strong> behavior that
+      depends on local conventions of nationality, culture, and
+      language that each implementation documents.
+    </p>
+    <p>
+      EXAMPLE: An example of locale-specific behavior is whether the
+      <code>islower</code> function returns true for characters other
+      than the 26 lowercase Latin letters.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>§3.4.3: undefined behavior:</strong> behavior, upon use
+      of a nonportable or erroneous program construct or of erroneous
+      data, for which this International Standard imposes no
+      requirements.
+    </p>
+    <p>
+      NOTE: Possible undefined behavior ranges from ignoring the
+      situation completely with unpredictable results, to behaving
+      during translation or program execution in a documented manner
+      characteristic of the environment (with or without the issuance
+      of a diagnostic message), to terminating a translation or
+      execution (with the issuance of a diagnostic message).
+    </p>
+    <p>
+      EXAMPLE: An example of undefined behavior is the behavior on
+      integer overflow.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>§3.4.4: unspecified behavior:</strong> use of an
+      unspecified value, or other behavior where this International
+      Standard provides two or more possibilities and imposes no
+      further requirements on which is chosen in any instance.
+    </p>
+    <p>
+      EXAMPLE: An example of unspecified behavior is the order in
+      which the arguments to a function are evaluated.
+    </p>
+  </li>
+</ul>
+
+<p><a href="https://susam.in/maze/c-standard-terms-for-behaviour.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Thu, 31 May 2018 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Ternary Operator Puzzle</title>
+<link>https://susam.in/maze/ternary-operator-puzzle.html</link>
+<guid>https://susam.in/maze/ternary-operator-puzzle.html</guid>
+<description>
+<![CDATA[
+<p>
+  What is the shortest statement you can write in the C or C++
+  programming language to express the following statement?
+</p>
+<pre><code>a = (a == 0 ? 0 : 1);</code></pre>
+<p>
+  See the comments page for the solution.
+</p>
+
+<p><a href="https://susam.in/maze/ternary-operator-puzzle.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Wed, 06 Apr 2011 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Decode Stumped</title>
+<link>https://susam.in/maze/decode-stumped.html</link>
+<guid>https://susam.in/maze/decode-stumped.html</guid>
+<description>
+<![CDATA[
+<p>
+  A few weeks ago, someone posted a C programming puzzle to
+  the <a href="mailto:ncoders@yahoogroups.com">ncoders</a> mailing
+  list. This is a mailing list I formed a few months ago to host
+  discussions on computers, programming, and network protocols among
+  university students. The programming puzzle that was posted asked if
+  we could write a C program such that the <code>main()</code>
+  function <em>does not seem to appear</em> in the code. Here is a
+  solution I could come up with that involves obfuscating the
+  identifer <code>main</code> using preprocessor macros and
+  the <code>##</code> preprocessing operator for token concatenation.
+</p>
+<pre>
+<code>#include &lt;stdio.h&gt;
+
+#define decode(s,t,u,m,p,e,d) m ## s ## u ## t
+#define begin decode(a,n,i,m,a,t,e)
+
+int begin()
+{
+    printf("Stumped?\n");
+}</code>
+</pre>
+<p>
+This program compiles and runs successfully. Here is the output:
+</p>
+<pre><samp>Stumped?</samp></pre>
+<p>
+  Let me explain how this code works. When the C preprocessor runs on
+  this code, the following preprocessing steps occur:
+</p>
+<ul>
+  <li>
+    <code>begin</code> is replaced with <code>decode(a,n,i,m,a,t,e)</code>,
+  </li>
+  <li>
+    <code>decode(a,n,i,m,a,t,e)</code> is replaced with <code>m ## a
+    ## i ## n</code>, and
+  </li>
+  <li>
+    <code>m ## a ## i ## n</code> is replaced with <code>main</code>.
+  </li>
+</ul>
+<p>
+  Thus <code>begin()</code> is replaced with <code>main()</code>.
+</p>
+<p>
+  <strong>Update on 31 Jul 2007:</strong> Although the mailing list
+  referred to in this post no longer exists, this tiny piece of code
+  seems to have survived on the web. A
+  <a href="https://www.google.com/search?q=decode(s%2Ct%2Cu%2Cm%2Cp%2Ce%2Cd)">quick
+  search</a> shows so many occurrences of this code on the web. It is
+  quite surprising to me that a rather silly piece of code written
+  during a Sunday afternoon to solve an equally silly puzzle has been
+  the subject of much discussion!
+</p>
+
+<p><a href="https://susam.in/maze/decode-stumped.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 02 Nov 2003 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>C Quine</title>
+<link>https://susam.in/maze/c-quine.html</link>
+<guid>https://susam.in/maze/c-quine.html</guid>
+<description>
+<![CDATA[
+<p>
+  I have been running a mailing list
+  named <a href="mailto:ncoders@yahoogroups.com">ncoders</a> for the
+  last several months now. This mailing list is meant for university
+  students interested in computers, programming, and network
+  protocols.
+</p>
+<p>
+  A few weeks ago, Vikram Agrawal, a very knowledgeable member of this
+  mailing list introduced us to an interesting type of computer
+  program called <em>quine</em>. A quine is a computer program that
+  produces an exact copy of its own source code as its output. It must
+  not consume any input, so tricks involving reading its own source
+  code and printing it are not permitted.
+</p>
+
+<h2 id="classic-quine">The Classic Quine<a href="#classic-quine"></a></h2>
+<p>
+  Here is a classic quine Vikram shared with us while explaining the
+  concept of quine:
+</p>
+<pre>
+<code>main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34);}";printf(s,34,s,34);}</code>
+</pre>
+<p>
+  This program is written in K&amp;R C. The current version of GCC
+  compiles it fine. It is a valid quine on ASCII machines because this
+  program uses the integer code <code>34</code> to print the quotation
+  mark (<code>"</code>) character. This will be explained further in
+  the next section. On another implementation of the C compiler which
+  does not use ASCII code for the quotation mark character, the
+  program needs to be modified to the use the correct code.
+</p>
+<p>
+  Here are some commands that demonstrate the quine:
+</p>
+<pre>
+$ <kbd>echo -n 'main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34);}";printf(s,34,s,34);}' > quine.c</kbd>
+$ <kbd>cc quine.c</kbd>
+$ <kbd>./a.out > out.txt</kbd>
+$ <kbd>diff quine.c out.txt</kbd>
+$ <kbd>./a.out</kbd>
+main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34);}";printf(s,34,s,34);}
+</pre>
+<p>
+  The source code of this quine does not end with a newline.
+  The <code>-n</code> option of GNU echo ensures that the source code
+  file is created without a terminating newline.
+</p>
+
+<h2 id="close-look-at-classic-quine">Close Look at the Classic Quine<a href="#close-look-at-classic-quine"></a></h2>
+<p>
+  Let us take a close look at how the quine introduced in the previous
+  section works. Let us add some newlines in the source code of this
+  quine for the sake of clarity.
+</p>
+<pre>
+<code>main()
+{
+    char*s="main(){char*s=%c%s%c;printf(s,34,s,34);}";
+    printf(s,34,s,34);
+}</code>
+</pre>
+<p>
+  This is almost the same program presented in the previous section.
+  Only a few newlines have been added to it to make the program easier
+  to read.
+</p>
+<p>
+  We can see that the <code>printf</code> call uses the
+  string <code>s</code> as the format string. The format string
+  contains three conversion
+  specifications: <code>%c</code>, <code>%s</code>,
+  and <code>%c</code>. The arguments for these conversions
+  are: <code>34</code>, the string <code>s</code> itself,
+  and <code>34</code> once again. Note that <code>34</code> is the
+  ASCII code for the quotation mark character (<code>"</code>). With
+  that in mind, let us now construct the output of
+  the <code>printf</code> call in a step-by-step manner.
+</p>
+<p>
+  The initial portion of the output consists of the format string from
+  the beginning up to, but not including, the first conversion
+  specification copied unchanged to the output stream. Here it is:
+</p>
+<pre><samp>main(){char*s=</samp></pre>
+<p>
+  Then the first conversion specification <code>%c</code> is
+  processed, the corresponnding argument <code>34</code> is taken, and
+  a quotation mark is printed like this:
+</p>
+<pre><samp>"</samp></pre>
+<p>
+  Then the second conversion specification <code>%s</code> is
+  processed. The corresponding argument is the string <code>s</code>
+  itself, so the entire string is printed like this:
+</p>
+<pre><samp>main(){char*s=%c%s%c;printf(s,34,s,34);}</samp></pre>
+<p>
+  Then the third conversion specification <code>%c</code> is
+  processed. The corresponding argument is <code>34</code> again, so
+  once again a quotation mark is printed like this:
+</p>
+<pre><samp>"</samp></pre>
+<p>
+  Finally, the rest of the format string is copied unchanged to
+  produce the following output:
+</p>
+<pre><samp>;printf(s,34,s,34);}</samp></pre>
+<p>
+  Here are all the five parts of the output presented next to each other:
+</p>
+<pre><samp>main(){char*s=</samp></pre>
+<pre><samp>"</samp></pre>
+<pre><samp>main(){char*s=%c%s%c;printf(s,34,s,34);}</samp></pre>
+<pre><samp>"</samp></pre>
+<pre><samp>;printf(s,34,s,34);}</samp></pre>
+<p>
+  Writing them all out in a single line, we get this:
+</p>
+<pre>
+<samp>main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34);}";printf(s,34,s,34);}</samp>
+</pre>
+<p>
+  This output matches the source code of the program thus confirming
+  that our program is a quine.
+</p>
+
+<h2 id="classic-quine-with-terminating-newline">Classic Quine With Terminating Newline<a href="#classic-quine-with-terminating-newline"></a></h2>
+<p>
+  The source code of the classic quine presented above does not
+  terminate with a newline. I found that a little bothersome because I
+  am used to always terminating my source code with a single trailing
+  newline at the end. So I decided to modify that quine a little to
+  ensure that it always ends with a newline. This is the quine I arrived at:
+</p>
+<pre>
+<samp>main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34,10);}%c";printf(s,34,s,34,10);}</samp>
+</pre>
+<p>
+  Compared to the quine in the previous sections, this one has an
+  additional <code>%c</code> at the end of the formal string and the
+  integer <code>10</code> as the corresponding argument to ensure that
+  the output ends with a newline. Here is a demonstration of this
+  quine:
+</p>
+<pre>
+$ <kbd>echo 'main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34,10);}%c";printf(s,34,s,34,10);}' > quine.c</kbd>
+$ <kbd>cc quine.c</kbd>
+$ <kbd>./a.out > out.txt</kbd>
+$ <kbd>diff quine.c out.txt</kbd>
+$ <kbd>./a.out</kbd>
+main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34,10);}%c";printf(s,34,s,34,10);}
+</pre>
+
+<p><a href="https://susam.in/maze/c-quine.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 19 Oct 2003 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

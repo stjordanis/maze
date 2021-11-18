@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's Thoughts Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's Thoughts Maze</description>
+
+<item>
+<title>Euler's Formula</title>
+<link>https://susam.in/maze/euler-formula.html</link>
+<guid>https://susam.in/maze/euler-formula.html</guid>
+<description>
+<![CDATA[
+<p>
+  I know that Euler's identity is widely regarded as the most beautiful
+  theorem in mathematics. In my opinion, the truly beautiful concept
+  involved here is Euler's formula:
+
+  \[
+  e^{ix} = \cos x + i \sin x.
+  \]
+
+  It unifies algebra, trigonometry, complex numbers, and calculus.
+  Euler's identity is only a special case of Euler's formula, i.e.,
+  Euler's formula with \( x = \pi \) gives us Euler's identity:
+
+  \[
+  e^{i \pi} = -1.
+  \]
+
+  This is cute but Euler's formula is truly beautiful. In fact with \( x
+  = \tau = 2\pi, \) we get another cute result:
+
+  \[
+  e^{i \tau} = 1.
+  \]
+
+  Quoting an excerpt from Chapter 22 of <em>The Feynman Lectures on
+  Physics, Volume I</em>:
+</p>
+<blockquote>
+  <p>
+    We summarize with this, the most remarkable formula in mathematics:
+
+    \[
+    e^{i \theta} = \cos \theta + i \sin \theta.
+    \]
+
+    This is our jewel.
+  </p>
+  <p>
+    We may relate the geometry to the algebra by representing complex
+    numbers in a plane; the horizontal position of a point is \( x, \)
+    the vertical position of a point is \( y. \) We represent every
+    complex number, \( x + iy. \) Then if the radial distance to this
+    point is called \( r \) and the angle is called \( \theta, \) the
+    algebraic law is that \( x + iy \) is written in the form \( r,
+    e^{i \theta} \) where the geometrical relationships between \( x
+    \) \( y, \) \( r, \) and \( \theta \) are as shown. This, then,
+    is the unification of algebra and geometry.
+  </p>
+</blockquote>
+<p>
+  See the bottom of the page at
+  <a href="https://www.feynmanlectures.caltech.edu/I_22.html">https://www.feynmanlectures.caltech.edu/I_22.html</a>
+  for the above excerpt.
+</p>
+
+<p><a href="https://susam.in/maze/euler-formula.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Dark Night Skies</title>
+<link>https://susam.in/maze/dark-night-skies.html</link>
+<guid>https://susam.in/maze/dark-night-skies.html</guid>
+<description>
+<![CDATA[
+<p>
+  Having grown up in a small town in the 1990s, I used to get pretty
+  dark skies at night. The night sky combined with a few books on
+  amateur astronomy from our school's library really fuelled my desire
+  to understand the universe and our place in it.
+</p>
+<p>
+  I got photocopies of two star charts (for both hemispheres) off a
+  book I found in our school library and began using the star chart
+  for the northern hemisphere to study the night sky. The winter sky
+  was and still is my favourite. To spot the easily recognizable Orion
+  constellation and know that its second brightest star with the
+  distinctly reddish hue is a red supergiant star that could explode
+  any day was fascinating.
+</p>
+<p>
+  The 1990s were also a great time to grow up for an astronomy
+  enthusiast like me. Two bright comets visited our neighbourhood in
+  1996-1997. First Comet Hyakutake visited us in March 1996 and then
+  Comet Hale-Bopp became spectacularly bright in April 1997.
+</p>
+<p>
+  Now 23 years later, as an adult living in a severely light-polluted
+  city, the recent Geminids meteor shower was rather disappointing. My
+  wife and I went to our terrace to watch the meteor shower after
+  midnight. A nice dark sky would have let us see about 2-4 meteors
+  shooting across the sky every minute. But we did not have a nice
+  dark sky. The whole sky was lit orange. As a kid, I would have never
+  imagined a sky could have such a colour at night! We could spot only
+  a meteor or two every 5-10 minutes.
+</p>
+<p>
+  I think it is very unfortunate that kids growing up in cities today
+  do not get to see the beautiful night sky the way I did during my
+  childhood days. A clear, dark night sky can be a great source of
+  inspiration and wonder for children.
+</p>
+
+<p><a href="https://susam.in/maze/dark-night-skies.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Of Course "changeme" Is Valid Base64</title>
+<link>https://susam.in/maze/of-course-changeme-is-valid-base64.html</link>
+<guid>https://susam.in/maze/of-course-changeme-is-valid-base64.html</guid>
+<description>
+<![CDATA[
+<p>
+  Today, I came across
+  this <a href="https://3fx.ch/blog/2019/12/09/changeme-is-valid-base64/">blog
+  post</a> regarding how the author of the post used the
+  string <code>"changeme"</code> as test data while testing a Base64
+  decoding functionality in their application. However, the author
+  incorrectly believed that this test data is not a valid
+  Base64-encoded string and therefore would fail to decode
+  successfully when decoded as Base64. To their surprise, they found
+  that this string <code>"changeme"</code> does in fact decode
+  successfully.
+</p>
+<p>
+  The post did not go any further into understanding why
+  indeed <code>"changeme"</code> is a valid Base64-encoded string and
+  why it can successfully be decoded into binary data. It appears that
+  the author was using Base64 encoding scheme as a black box.
+</p>
+<p>
+  I think it is worth noting and illustrating that any alphanumeric
+  string with a length that is a multiple of 4 is a valid
+  Base64-encoded string. Here are some examples that illustrate this:
+</p>
+<pre>
+<samp>$ <kbd>printf AAAA | base64 --decode | od -tx1</kbd>
+0000000    00  00  00
+0000003
+$ <kbd>printf AAAAAAAA | base64 --decode | od -tx1</kbd>
+0000000    00  00  00  00  00  00
+0000006
+$ <kbd>printf AQEB | base64 --decode | od -tx1</kbd>
+0000000    01  01  01
+0000003
+$ <kbd>printf AQID | base64 --decode | od -tx1</kbd>
+0000000    01  02  03
+0000003
+$ <kbd>printf main | base64 --decode | od -tx1</kbd>
+0000000    99  a8  a7
+0000003
+$ <kbd>printf scrabble | base64 --decode | od -tx1</kbd>
+0000000    b1  ca  da  6d  b9  5e
+0000006
+$ <kbd>printf 12345678 | base64 --decode | od -tx1</kbd>
+0000000    d7  6d  f8  e7  ae  fc
+0000006</samp>
+</pre>
+<p>
+  Further, since <code>+</code> and <code>/</code> are also used as
+  symbols in Base64 encoding (for binary <code>111110</code>
+  and <code>111111</code>, respectively), we also have a few more
+  intersting examples:
+</p>
+<pre>
+<samp>$ <kbd>printf 1+2+3+4+5/11 | base64 --decode | od -tx1</kbd>
+0000000    d7  ed  be  df  ee  3e  e7  fd  75
+0000011
+$ <kbd>printf "\xd7\xed\xbe\xdf\xee\x3e\xe7\xfd\x75" | base64</kbd>
+1+2+3+4+5/11</samp>
+</pre>
+<p>
+  I think it is good to understand why any string with a length that
+  is a multiple of 4 turns out to be a valid Base64-encoded string.
+  The Base64 encoding scheme encodes each group of 6 bits in the
+  binary input with a chosen ASCII character. For every possible 6-bit
+  binary value, we have assigned an ASCII character that appears in
+  the Base64-encoded string. Each output ASCII character can be one of
+  the 64 carefully chosen ASCII characters: lowercase and uppercase
+  letters from the English alphabet, the ten digits from the Arabic
+  numerals, the plus sign (<code>+</code>) and the forward slash
+  (<code>/</code>). For example, the bits <code>000000</code> is
+  encoded as <code>A</code>, the bits <code>000001</code> is encoded
+  as <code>B</code>, and so on. The equals sign (<code>=</code>) is
+  used for padding but that is not something we will discuss in detail
+  in this post.
+</p>
+<p>
+  The smallest positive multiple of 6 that is also a multiple of 8 is
+  24. Thus every group of 3 bytes (24 bits) of binary data is
+  translated to 4 ASCII characters in its Base64-encoded string. Thus
+  the entire input data is divided into groups of 3 bytes each and
+  then each group of 3 bytes is encoded into 4 ASCII characters. What
+  if the last group is less than 3 bytes long? There are certain
+  padding rules for such cases but I will not discuss them right now
+  in this post. For more details on the padding rules,
+  see <a href="https://datatracker.ietf.org/doc/html/rfc4648">RFC
+  4648</a>.
+</p>
+<p>
+  Now as a natural result of the encoding scheme, it turns out that
+  any 4 alphanumeric characters is a valid Base64 encoding of some
+  binary data. That's because for every alphanumeric character, we can
+  find some 6-bit binary data that would be translated to it during
+  Base64 encoding. This is the reason why any alphanumeric string with
+  a length that is a multiple of 4 is a valid Base64-encoded string
+  and can be successfully decoded to some binary data.
+</p>
+
+
+<p><a href="https://susam.in/maze/of-course-changeme-is-valid-base64.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Hacktoberfest Spam</title>
+<link>https://susam.in/maze/hacktoberfest-spam.html</link>
+<guid>https://susam.in/maze/hacktoberfest-spam.html</guid>
+<description>
+<![CDATA[
+<p>
+  I received two pull requests for two of my projects on GitHub today.
+  I am the author of one and the maintainer of the other.
+</p>
+<p>
+  At first, the pull requests did not make sense at all. One of them
+  made minor changes to a README, e.g., changing "this book" to "the
+  book". It did not fix a typo or grammatical error. It merely chose a
+  word different from the one I had chosen. In fact, I preferred "this
+  book", so the pull request (PR) was inconsistent with my preference.
+  There was no explanation whatsoever regarding why this change was
+  warranted. Then I looked at the pull request author's profile and
+  found that the same person had submitted several such trivial pull
+  requests to other projects too, all of them changing "this" to "the"
+  at some places in various README files.
+</p>
+<p>
+  It all began to make sense when I looked at the calendar. It was Oct
+  01. This looked like pull request spam due to Hacktoberfest. For
+  now, I just labelled the pull requests as "invalid" (as suggested by
+  the <a href="https://hacktoberfest.digitalocean.com/faq/">Hacktoberfest
+  FAQ</a>), closed the pull requests, and moved on.
+</p>
+<p>
+  Like all good things created with good intentions on the Internet,
+  spam is hurting this event and bringing bad reputation to it. The
+  possibility of large scale, endless spam should be worked into the
+  design of any new Internet-based event or solution.
+</p>
+
+<p><a href="https://susam.in/maze/hacktoberfest-spam.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Pointers in K&amp;R</title>
+<link>https://susam.in/maze/pointers-in-knr.html</link>
+<guid>https://susam.in/maze/pointers-in-knr.html</guid>
+<description>
+<![CDATA[
+<p>
+  I learnt C from the book <em>The C Programming Language, 2nd
+  ed.</em> (K&amp;R) written by Brian Kernighan and Dennis Ritchie
+  about 18 years ago during my engineering studies. The subject of
+  pointers was generally believed to be scary among fellow students
+  and many of them bought pretty fat books that were dedicated solely
+  to the topic of pointers. However, when I reached Chapter 5 of the
+  book , I found that it did a wonderful job at teaching pointers in
+  merely 34 pages. The chapter opens with this sentence:
+</p>
+<blockquote>
+  A pointer is a variable that contains the address of a variable.
+</blockquote>
+<p>
+  The exact point at which the whole topic of pointers became crystal
+  clear was when I encountered this sentence in &sect; 5.3 Pointers
+  and Arrays:
+</p>
+<blockquote>
+  Rather more surprising, at first sight, is the fact that a reference
+  to <code>a[i]</code> can also be written as <code>*(a+i)</code>.
+</blockquote>
+<p>
+  Indeed, it was easy to confirm that by compiling and running the
+  following program:
+</p>
+<pre>
+<code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a[] = {2, 3, 5, 7, 11};
+    printf("%d\n", *(a + 2));
+    printf("%d\n", a[2]);
+    printf("%d\n", 2[a]);
+    return 0;
+}</code>
+</pre>
+<p>
+  The output is:
+</p>
+<pre>
+<samp>5
+5
+5</samp>
+</pre>
+<p>
+  C was the first serious programming language I was learning back
+  then and at that time, I don't think I could have come across a
+  better book than K&amp;R to learn this subject. Like many others, I
+  too feel that this book is a model for technical writing. I wish
+  more technical books were written like this with clear presentation
+  and concise treatment.
+</p>
+
+<p><a href="https://susam.in/maze/pointers-in-knr.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Sticking With MathJax</title>
+<link>https://susam.in/maze/sticking-with-mathjax.html</link>
+<guid>https://susam.in/maze/sticking-with-mathjax.html</guid>
+<description>
+<![CDATA[
+<p>
+  I have considered switching from MathJax to KaTeX for my
+  MathJax-based projects such
+  as <a href="https://github.com/susam/texme">TeXMe</a>
+  and <a href="https://github.com/susam/mathbin">MathBin</a> but I had
+  to decide against doing so because MathJax supports commands
+  like <code>\label</code>, <code>\eqref</code>, <code>\notag</code>,
+  etc. and environments
+  like <code>align</code>, <code>multiline</code>, etc. KaTeX does not
+  support them, so switching to KaTeX would break many existing
+  documents written using TeXMe or MathBin. I am going to stick with
+  MathJax for now.
+</p>
+<p>
+  Here are some useful resources:
+</p>
+<ul>
+  <li>
+    <a href="http://docs.mathjax.org/en/latest/input/tex/macros/">MathJax: Supported TeX/LaTeX commands</a>
+  </li>
+  <li>
+    <a href="https://katex.org/docs/supported.html">KaTeX: Supported Functions</a>
+  </li>
+</ul>
+
+<p><a href="https://susam.in/maze/sticking-with-mathjax.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>UID Numbering Scheme</title>
+<link>https://susam.in/maze/uid-numbering-scheme.html</link>
+<guid>https://susam.in/maze/uid-numbering-scheme.html</guid>
+<description>
+<![CDATA[
+<p>
+Some thoughts
+on <a href="http://web.archive.org/web/20100704211109/www.uidai.gov.in/documents/A_UID_Numbering_Scheme.pdf">A
+UID Numbering Scheme</a> published
+by <a href="http://web.archive.org/web/20100523144720/http://uidai.gov.in/">Unique
+    Identification Authority of India (UIDAI)</a>.
+</p>
+<ol>
+  <li>
+    <p>
+      <strong>Process for De-duplication</strong> (page 5):
+    </p>
+    <blockquote>
+      Since biometric information contain no ordering and hence cannot
+      be indexed like text based information, when a resident applies
+      for a UID with his/her fingerprints, iris and photo of face,
+      these biometrics have to be compared against the entire UID
+      database (existing residents with UIDs) to ensure that this new
+      applicant is indeed unique and has not already been allotted a
+      UID (even under a different name, address etc). This 1:N
+      biometric comparison (N=size of the UID database) is the most
+      compute intensive operation of the UID server systeem.
+    </blockquote>
+    <p>
+      It sounds as if the search operation would take O(N) time. Why
+      can't the data be treated as binary numbers that can be ordered
+      and indexed? It'll improve the search time to at least O(log N)
+      time and possibly even further to O(1) time if a hashtable is
+      used. The performance improvement is going to be huge since N is
+      as large as 1.2 billion.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>Memorization of UID</strong> (page 6):
+    </p>
+    <blockquote>
+      This section is about how long the string length should be. In
+      short, the string has to be as short as possible but that meets
+      density requirement and does not include alphabet characters,
+      just numbers. It is important to keep the UID simple and small
+      to help residents to remember their number.
+    </blockquote>
+    <blockquote>
+      Firstly the use of the hindu-arabic numeral
+      system(0,1,2,3,4,5,6,7,8,9) is suggested since these numerals
+      are recognized/used by the largest subset of people in the
+      country. Secondly we suggest the use of 12 digits (11 + 1 check
+      sum) since 11 digits gives us a 100 billion number space which in
+      turn can provide a low density of used numbers.
+    </blockquote>
+    <p>
+      I don't think a 12 digit UID is easy to memorize. However, I
+      agree that this length is necessary to ensure unique UIDs for a
+      large population like India's. The population of India is about
+      1.2 billion now. Now issuing 1.2 billion UIDs from a maximum
+      possible space of 100 billion numbers implies that any UID
+      chosen at random has a 1.2% probability of being a valid UID
+      issued to someone. In other words, 1 out of every 83 possible
+      UID values is a valid UID issued to someone. Therefore, these
+      UIDs should not be treated as secret. It should be assumed that
+      an adversary can easily guess valid UIDs issued to actual
+      residents.
+    </p>
+    <p>
+      Note that this problem gets worse as the population of India
+      grows. Currently, it is growing at the rate of about 1.4% every
+      year. The growth rate is expected to slow down in future. For
+      now, I will assume that the growth rate is never going to exceed
+      1.4% to get a conservative estimate. Then by the year 2050, the
+      population of India would not exceed 2.1 billion. Then the
+      probability that a randomly generated UID is an actual UID
+      issued to a resident would increase to 2.1%.
+    </p>
+    <p>
+      Therefore, any critical operation performed using a UID must
+      perform an independent verification, such as two-factor
+      authentication, SMS-based verification, etc. to ensure that the
+      operation is approved by the actual resident the UID is issued
+      to.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>UID static PIN and dynamic PIN</strong> (page 7):
+    </p>
+    <blockquote>
+      In order to authenticate (ascertain it is who s/he claims to be) a
+      resident needs to provide his/her UID number as well as say a
+      biometric marker – such as a fingerprint.
+    </blockquote>
+    <p>
+      Using biometrics while issuing UIDs may be fine. But using
+      biometrics for other important transactions might put the
+      resident at risk. For example, see this BBC news story:
+      <a href="http://web.archive.org/web/20050528103727/http://news.bbc.co.uk/2/hi/asia-pacific/4396831.stm">Malaysia Car Thieves Steal Finger</a>.
+  </li>
+  <li>
+    <p>
+      <strong>Principles and Requirements</strong> (page 11):
+    </p>
+    <blockquote>
+      Number Generation: The numbers are generated in a random,
+      non-repeating sequence. There are several approaches to doing
+      this in the computer science literature. The algorithm and any
+      "seed" chosen to generate IDs should not be made public and
+      should be considered a national secret.
+    </blockquote>
+    <p>
+      This violates Shannon's maxim, "The enemy knows the system." The
+      security of the system must rely on the secrecy of the seed
+      only. It must not depend on the secrecy of the algorithm.
+      Further, as explained in point 2 above, an adversory can
+      randomly generate 12 digit number with a high likelihood of it
+      being an actual UID to a resident.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>The Checksum</strong> (page 12):
+    </p>
+    <blockquote>
+      There is one scheme that meets our requirements: the Verhoeff
+      Scheme. This scheme is relatively complex, and in the days
+      before ubiquitous computing, there was a tendency to avoid it in
+      favor of simpler schemes. In this day and age however, and at
+      the scale of the UID, precision must be the goal. The Verhoeff
+      scheme catches all single errors and all adjacent
+      transpositions. It also catches >95% of twin errors and >94% of
+      jump transpositions.
+    </blockquote>
+    <p>
+      For those who are curious about what this scheme is, more information can be found at
+      <a href="http://www.cs.utsa.edu/~wagner/laws/verhoeff.html">http://www.cs.utsa.edu/~wagner/laws/verhoeff.html</a>
+      and <a href="http://en.wikipedia.org/wiki/Verhoeff_algorithm">http://en.wikipedia.org/wiki/Verhoeff_algorithm</a>.
+    </p>
+  </li>
+</ol>
+<p>
+  <strong>Update on 31 May 2010:</strong> After an email conversation
+  with Nandan Nilekani about the points I have documented in this blog
+  post, he requested that I send these points in the form a document
+  to him so that he can have it reviewed by his team. I have done so
+  today.
+</p>
+
+<p><a href="https://susam.in/maze/uid-numbering-scheme.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Mon, 24 May 2010 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

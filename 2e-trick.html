@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>%2E Trick - Susam's Maze</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#333">
+  <link rel="canonical" href="https://susam.in/maze/2e-trick.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<main>
+<h1>%2E Trick</h1>
+<div>By <b>Susam Pal</b> on 09 Dec 2001</div>
+<p>
+  There are two interesting vulnerabilities in Microsoft IIS 3.0 that
+  allow remote attackers to view the source code of dynamic web pages
+  written using ASP. Both are related and both are due to improper
+  input validation by IIS 3.0.
+</p>
+
+<h2 id="appending-dot">Appending Dot<a href="#appending-dot"></a></h2>
+<p>
+  The first vulnerability allows the client to retrieve the source
+  code of an ASP script by simply appending a dot
+  (i.e., <code>.</code>) to the end of the URL. For example, while an
+  URL like
+</p>
+<pre><code>http://example.com/foo.asp</code></pre>
+<p>
+  shows the output
+  of <code>foo.asp</code>, the same URL when modified
+  to
+</p>
+<pre><code>http://example.com/foo.asp.</code></pre> shows its source
+  code.
+  See <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0154">CVE-1999-0154</a>
+  and <a href="http://web.archive.org/web/19980220121004/http://ciac.llnl.gov/ciac/bulletins/h-48.shtml">CIAC:H-48</a>
+  for more details on this issue.
+</p>
+
+<h2 id="replacing-dit-with-2e">Replacing Dot With %2E<a href="#replacing-dit-with-2e"></a></h2>
+<p>
+  The second vulnerability, discovered by Weld Pond, is an issue that
+  was introduced when the first issue was fixed by Microsoft. This
+  vulnerability allows a client to retrieve the source code of an ASP
+  script by changing the dot in the filename with its URL-encoding,
+  i.e., <code>%2e</code>. For example, while an URL like
+</p>
+<pre><code>http://example.com/foo.asp</code></pre>
+<p>
+  shows the output
+  of <code>foo.asp</code>, the same URL when modified
+  to
+</p>
+<pre><code>http://example.com/foo%2easp.</code></pre> shows its source
+  code.
+</p>
+<p>
+  Note that <code>2e</code> is the hexadecimal representation of the
+  ASCII code of the dot character. Here is a tiny C program that
+  demonstrates this:
+</p>
+<pre>
+<code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("'%c', %d, %#x\n", '.', '.', '.');
+    return 0;
+}</code>
+</pre>
+Here is the output:
+<pre>
+<samp>$ cc foo.c && ./a.out
+'.', 46, 0x2e</samp>
+</pre>
+<p>
+  See <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0253">CVE-1999-0253</a>
+  and <a href="http://web.archive.org/web/20010309183310/http://www.securityfocus.com/bid/1814">BID:1814</a>
+  for more details on this issue.
+</p>
+
+<div><a href="comments/2e-trick.html">Comments</a></div>
+</main>
+
+<footer class="textcenter">
+  <hr>
+  <div>
+    <a href="./">Maze</a>
+    <a href="./tags.html">Tags</a>
+    <a href="./rss.xml">Feed</a>
+    <a href="https://susam.in/maze/../app/subscribe/">Subscribe</a>
+    <a href="about.html">About</a>
+    <a href="/">Home</a>
+    <a href="https://github.com/susam">GitHub</a>
+    <a href="https://twitter.com/susam">Twitter</a>
+  </div>
+  <p>&copy; 2001&ndash;2021 Susam Pal</p>
+</footer>
+</body>
+</html>

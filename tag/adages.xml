@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's Adages Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's Adages Maze</description>
+
+<item>
+<title>Laws of Correction</title>
+<link>https://susam.in/maze/laws-of-correction.html</link>
+<guid>https://susam.in/maze/laws-of-correction.html</guid>
+<description>
+<![CDATA[
+<h2 id="mckean-law">McKean's Law<a href="#mckean-law"></a></h2>
+<blockquote>
+  Any correction of the speech or writing of others will contain at
+  least one grammatical, spelling, or typographical error.
+</blockquote>
+
+<h2 id="skitt-law">Skitt's Law<a href="#skitt-law"></a></h2>
+<blockquote>
+  Any post correcting an error in another post will contain at least
+  one error itself.
+</blockquote>
+
+<h2 id="muphry-law">Muphry's Law<a href="#muphry-law"></a></h2>
+<blockquote>
+  If you write anything criticizing editing or proofreading, there
+  will be a fault of some kind in what you have written.
+</blockquote>
+
+<h2 id="hartman-law">Hartman's Law of Prescriptivist Retaliation<a href="#hartman-law"></a></h2>
+<blockquote>
+  Any article or statement about correct grammar, punctuation, or
+  spelling is bound to contain at least one eror.
+</blockquote>
+
+<p><a href="https://susam.in/maze/laws-of-correction.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Fri, 18 Jun 2010 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

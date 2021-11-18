@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's Puzzle Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's Puzzle Maze</description>
+
+<item>
+<title>Magical Chameleons Puzzle</title>
+<link>https://susam.in/maze/magical-chameleons-puzzle.html</link>
+<guid>https://susam.in/maze/magical-chameleons-puzzle.html</guid>
+<description>
+<![CDATA[
+<p>
+  An island contained chameleons of three different colours: red,
+  green and blue. The chameleons were studied by some biologists and
+  they found that when two chameleons of different colours met they
+  changed their colours to the third one. They found that there were
+  2000 red chameleons and 3000 green ones on the day they counted
+  them. They didn't get time to count the number of blue chameleons.
+</p>
+<p>
+  When the biologists returned to the island two months later they
+  found that all chameleons were red in colour. They were certain that
+  no chameleons died because they did not find dead remains of any
+  chameleon. What does it say about the number of blue chameleons on
+  the day the biologists counted the number of red and green
+  chameleons?
+</p>
+<p>
+  See the comments page for the solution.
+</p>
+
+<p><a href="https://susam.in/maze/magical-chameleons-puzzle.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 19 Jun 2011 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Calendar Cubes Puzzle</title>
+<link>https://susam.in/maze/calendar-cubes-puzzle.html</link>
+<guid>https://susam.in/maze/calendar-cubes-puzzle.html</guid>
+<description>
+<![CDATA[
+<p>
+  How many different ways are there to assign the ten digits of Arabic
+  numerals (0 to 9) to each face of two cubes to ensure that we can
+  arrange both cubes on any day such that the front faces of the cubes
+  show the current day of the month?
+</p>
+<p>
+  For example, on February 9 the cubes would be placed side by side
+  such that the front face of the cube on the left side shows 0 and
+  that of the one on the right side shows 9.
+</p>
+<p>
+  Two ways of assigning the digits to the faces of the cubes are
+  considered different if and only if it is not possible to get one
+  assignment from the other by performing one or more of the following
+  operrations:
+</p>
+<ol>
+  <li>
+    Rotating (reorienting) the digits with respect to the faces they
+    belong to.
+  </li>
+  <li>
+    Rotating the cubes.
+  </li>
+  <li>
+    Swapping the cubes.
+  </li>
+</ol>
+<p>
+  See the comments page for the solution.
+</p>
+
+
+<p><a href="https://susam.in/maze/calendar-cubes-puzzle.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 12 Jun 2011 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Missing Digit Puzzle</title>
+<link>https://susam.in/maze/missing-digit-puzzle.html</link>
+<guid>https://susam.in/maze/missing-digit-puzzle.html</guid>
+<description>
+<![CDATA[
+<p>
+  There is a 10-digit multiple of 234. 9 of its digits in ascending
+  order are: 0, 1, 1, 2, 3, 4, 5, 7 and 9. What is the missing digit?
+</p>
+<p>
+  See the comments page for the solution.
+</p>
+
+<p><a href="https://susam.in/maze/missing-digit-puzzle.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sat, 14 May 2011 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Ternary Operator Puzzle</title>
+<link>https://susam.in/maze/ternary-operator-puzzle.html</link>
+<guid>https://susam.in/maze/ternary-operator-puzzle.html</guid>
+<description>
+<![CDATA[
+<p>
+  What is the shortest statement you can write in the C or C++
+  programming language to express the following statement?
+</p>
+<pre><code>a = (a == 0 ? 0 : 1);</code></pre>
+<p>
+  See the comments page for the solution.
+</p>
+
+<p><a href="https://susam.in/maze/ternary-operator-puzzle.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Wed, 06 Apr 2011 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Polar Bear Puzzle</title>
+<link>https://susam.in/maze/polar-bear-puzzle.html</link>
+<guid>https://susam.in/maze/polar-bear-puzzle.html</guid>
+<description>
+<![CDATA[
+<p>
+  Alice asked Bob, "A bear walked 1 km south, then 1 km west, then 1
+  km north, and it was back at the point from where it started. What
+  colour was the bear most likely to be?"
+</p>
+<p>
+  Bob thought for a while, could not arrive at an answer, and gave up.
+  Alice explained, "Well, the answer is white. It is a polar bear. It
+  is only when you start from the North Pole that after travelling 1
+  km south, 1 km west, and 1 km north you would end up at the point
+  where you started."
+</p>
+<p>
+  Bob replied, "That is an interesting solution. Now that I understand
+  your solution, I realize that there are other starting points apart
+  from the North Pole where one could walk 1 km south, then 1 km west,
+  and then 1 km north to return to the starting point."
+</p>
+<p>
+  Can you find all the other such starting points that Bob is talking
+  about?
+</p>
+<p>
+  See the comments page for the solution.
+</p>
+
+<p><a href="https://susam.in/maze/polar-bear-puzzle.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Wed, 09 Mar 2011 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Shrinking List Puzzle</title>
+<link>https://susam.in/maze/shrinking-list-puzzle.html</link>
+<guid>https://susam.in/maze/shrinking-list-puzzle.html</guid>
+<description>
+<![CDATA[
+<p>
+  The first \( 9 \) natural numbers are given in a list. You are
+  supposed to select two numbers randomly from the list, call them \(
+  x \) and \( y \), remove them from the list and insert \( x + y + xy
+  \) into the list. You keep repeating this until you are left with
+  only one number in the list. Find the final number that is left in
+  the list.
+</p>
+<p>
+  See the comments page for the solution.
+</p>
+
+<p><a href="https://susam.in/maze/shrinking-list-puzzle.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Thu, 17 Feb 2011 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Decode Stumped</title>
+<link>https://susam.in/maze/decode-stumped.html</link>
+<guid>https://susam.in/maze/decode-stumped.html</guid>
+<description>
+<![CDATA[
+<p>
+  A few weeks ago, someone posted a C programming puzzle to
+  the <a href="mailto:ncoders@yahoogroups.com">ncoders</a> mailing
+  list. This is a mailing list I formed a few months ago to host
+  discussions on computers, programming, and network protocols among
+  university students. The programming puzzle that was posted asked if
+  we could write a C program such that the <code>main()</code>
+  function <em>does not seem to appear</em> in the code. Here is a
+  solution I could come up with that involves obfuscating the
+  identifer <code>main</code> using preprocessor macros and
+  the <code>##</code> preprocessing operator for token concatenation.
+</p>
+<pre>
+<code>#include &lt;stdio.h&gt;
+
+#define decode(s,t,u,m,p,e,d) m ## s ## u ## t
+#define begin decode(a,n,i,m,a,t,e)
+
+int begin()
+{
+    printf("Stumped?\n");
+}</code>
+</pre>
+<p>
+This program compiles and runs successfully. Here is the output:
+</p>
+<pre><samp>Stumped?</samp></pre>
+<p>
+  Let me explain how this code works. When the C preprocessor runs on
+  this code, the following preprocessing steps occur:
+</p>
+<ul>
+  <li>
+    <code>begin</code> is replaced with <code>decode(a,n,i,m,a,t,e)</code>,
+  </li>
+  <li>
+    <code>decode(a,n,i,m,a,t,e)</code> is replaced with <code>m ## a
+    ## i ## n</code>, and
+  </li>
+  <li>
+    <code>m ## a ## i ## n</code> is replaced with <code>main</code>.
+  </li>
+</ul>
+<p>
+  Thus <code>begin()</code> is replaced with <code>main()</code>.
+</p>
+<p>
+  <strong>Update on 31 Jul 2007:</strong> Although the mailing list
+  referred to in this post no longer exists, this tiny piece of code
+  seems to have survived on the web. A
+  <a href="https://www.google.com/search?q=decode(s%2Ct%2Cu%2Cm%2Cp%2Ce%2Cd)">quick
+  search</a> shows so many occurrences of this code on the web. It is
+  quite surprising to me that a rather silly piece of code written
+  during a Sunday afternoon to solve an equally silly puzzle has been
+  the subject of much discussion!
+</p>
+
+<p><a href="https://susam.in/maze/decode-stumped.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 02 Nov 2003 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>C Quine</title>
+<link>https://susam.in/maze/c-quine.html</link>
+<guid>https://susam.in/maze/c-quine.html</guid>
+<description>
+<![CDATA[
+<p>
+  I have been running a mailing list
+  named <a href="mailto:ncoders@yahoogroups.com">ncoders</a> for the
+  last several months now. This mailing list is meant for university
+  students interested in computers, programming, and network
+  protocols.
+</p>
+<p>
+  A few weeks ago, Vikram Agrawal, a very knowledgeable member of this
+  mailing list introduced us to an interesting type of computer
+  program called <em>quine</em>. A quine is a computer program that
+  produces an exact copy of its own source code as its output. It must
+  not consume any input, so tricks involving reading its own source
+  code and printing it are not permitted.
+</p>
+
+<h2 id="classic-quine">The Classic Quine<a href="#classic-quine"></a></h2>
+<p>
+  Here is a classic quine Vikram shared with us while explaining the
+  concept of quine:
+</p>
+<pre>
+<code>main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34);}";printf(s,34,s,34);}</code>
+</pre>
+<p>
+  This program is written in K&amp;R C. The current version of GCC
+  compiles it fine. It is a valid quine on ASCII machines because this
+  program uses the integer code <code>34</code> to print the quotation
+  mark (<code>"</code>) character. This will be explained further in
+  the next section. On another implementation of the C compiler which
+  does not use ASCII code for the quotation mark character, the
+  program needs to be modified to the use the correct code.
+</p>
+<p>
+  Here are some commands that demonstrate the quine:
+</p>
+<pre>
+$ <kbd>echo -n 'main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34);}";printf(s,34,s,34);}' > quine.c</kbd>
+$ <kbd>cc quine.c</kbd>
+$ <kbd>./a.out > out.txt</kbd>
+$ <kbd>diff quine.c out.txt</kbd>
+$ <kbd>./a.out</kbd>
+main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34);}";printf(s,34,s,34);}
+</pre>
+<p>
+  The source code of this quine does not end with a newline.
+  The <code>-n</code> option of GNU echo ensures that the source code
+  file is created without a terminating newline.
+</p>
+
+<h2 id="close-look-at-classic-quine">Close Look at the Classic Quine<a href="#close-look-at-classic-quine"></a></h2>
+<p>
+  Let us take a close look at how the quine introduced in the previous
+  section works. Let us add some newlines in the source code of this
+  quine for the sake of clarity.
+</p>
+<pre>
+<code>main()
+{
+    char*s="main(){char*s=%c%s%c;printf(s,34,s,34);}";
+    printf(s,34,s,34);
+}</code>
+</pre>
+<p>
+  This is almost the same program presented in the previous section.
+  Only a few newlines have been added to it to make the program easier
+  to read.
+</p>
+<p>
+  We can see that the <code>printf</code> call uses the
+  string <code>s</code> as the format string. The format string
+  contains three conversion
+  specifications: <code>%c</code>, <code>%s</code>,
+  and <code>%c</code>. The arguments for these conversions
+  are: <code>34</code>, the string <code>s</code> itself,
+  and <code>34</code> once again. Note that <code>34</code> is the
+  ASCII code for the quotation mark character (<code>"</code>). With
+  that in mind, let us now construct the output of
+  the <code>printf</code> call in a step-by-step manner.
+</p>
+<p>
+  The initial portion of the output consists of the format string from
+  the beginning up to, but not including, the first conversion
+  specification copied unchanged to the output stream. Here it is:
+</p>
+<pre><samp>main(){char*s=</samp></pre>
+<p>
+  Then the first conversion specification <code>%c</code> is
+  processed, the corresponnding argument <code>34</code> is taken, and
+  a quotation mark is printed like this:
+</p>
+<pre><samp>"</samp></pre>
+<p>
+  Then the second conversion specification <code>%s</code> is
+  processed. The corresponding argument is the string <code>s</code>
+  itself, so the entire string is printed like this:
+</p>
+<pre><samp>main(){char*s=%c%s%c;printf(s,34,s,34);}</samp></pre>
+<p>
+  Then the third conversion specification <code>%c</code> is
+  processed. The corresponding argument is <code>34</code> again, so
+  once again a quotation mark is printed like this:
+</p>
+<pre><samp>"</samp></pre>
+<p>
+  Finally, the rest of the format string is copied unchanged to
+  produce the following output:
+</p>
+<pre><samp>;printf(s,34,s,34);}</samp></pre>
+<p>
+  Here are all the five parts of the output presented next to each other:
+</p>
+<pre><samp>main(){char*s=</samp></pre>
+<pre><samp>"</samp></pre>
+<pre><samp>main(){char*s=%c%s%c;printf(s,34,s,34);}</samp></pre>
+<pre><samp>"</samp></pre>
+<pre><samp>;printf(s,34,s,34);}</samp></pre>
+<p>
+  Writing them all out in a single line, we get this:
+</p>
+<pre>
+<samp>main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34);}";printf(s,34,s,34);}</samp>
+</pre>
+<p>
+  This output matches the source code of the program thus confirming
+  that our program is a quine.
+</p>
+
+<h2 id="classic-quine-with-terminating-newline">Classic Quine With Terminating Newline<a href="#classic-quine-with-terminating-newline"></a></h2>
+<p>
+  The source code of the classic quine presented above does not
+  terminate with a newline. I found that a little bothersome because I
+  am used to always terminating my source code with a single trailing
+  newline at the end. So I decided to modify that quine a little to
+  ensure that it always ends with a newline. This is the quine I arrived at:
+</p>
+<pre>
+<samp>main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34,10);}%c";printf(s,34,s,34,10);}</samp>
+</pre>
+<p>
+  Compared to the quine in the previous sections, this one has an
+  additional <code>%c</code> at the end of the formal string and the
+  integer <code>10</code> as the corresponding argument to ensure that
+  the output ends with a newline. Here is a demonstration of this
+  quine:
+</p>
+<pre>
+$ <kbd>echo 'main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34,10);}%c";printf(s,34,s,34,10);}' > quine.c</kbd>
+$ <kbd>cc quine.c</kbd>
+$ <kbd>./a.out > out.txt</kbd>
+$ <kbd>diff quine.c out.txt</kbd>
+$ <kbd>./a.out</kbd>
+main(){char*s="main(){char*s=%c%s%c;printf(s,34,s,34,10);}%c";printf(s,34,s,34,10);}
+</pre>
+
+<p><a href="https://susam.in/maze/c-quine.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 19 Oct 2003 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

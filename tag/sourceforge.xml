@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's SourceForge Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's SourceForge Maze</description>
+
+<item>
+<title>Immediate SourceForge Tracker Notification</title>
+<link>https://susam.in/maze/immediate-sourceforge-tracker-notification.html</link>
+<guid>https://susam.in/maze/immediate-sourceforge-tracker-notification.html</guid>
+<description>
+<![CDATA[
+<p>
+  Here are the steps I followed to prevent the tracker email notification
+  sent to a SourceForge mailing list address from being held for
+  moderation.
+</p>
+<ol>
+  <li>
+    Navigate to <em>Mailman admin</em> &gt; <em>Privacy options</em>
+    &gt; <em>Sender filters</em>. Then
+    add <code>noreply@sourceforge.net</code> to the list of non-member
+    addresses whose postings should be automatically accepted.
+  </li>
+  <li>
+    Navigate to <em>Mailman admin</em> &gt; <em>Privacy options</em>
+    &gt; <em>Recepient filters</em>. Then
+    add <code>noreply@sourceforge.net</code> to alias names (regexps)
+    which qualify as explicit to or cc destination names for this
+    list.
+  </li>
+</ol>
+<p>
+  The first step was necessary because all emails sent by tracker
+  has <code>noreply@sourceforge.net</code> as the <em>From</em> address.
+</p>
+<p>
+  The second step was necessary because all emails sent by tracker
+  has <code>noreply@sourceforge.net</code> as the <em>To</em> address.
+</p>
+
+<p><a href="https://susam.in/maze/immediate-sourceforge-tracker-notification.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's LaTeX Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's LaTeX Maze</description>
+
+<item>
+<title>Sticking With MathJax</title>
+<link>https://susam.in/maze/sticking-with-mathjax.html</link>
+<guid>https://susam.in/maze/sticking-with-mathjax.html</guid>
+<description>
+<![CDATA[
+<p>
+  I have considered switching from MathJax to KaTeX for my
+  MathJax-based projects such
+  as <a href="https://github.com/susam/texme">TeXMe</a>
+  and <a href="https://github.com/susam/mathbin">MathBin</a> but I had
+  to decide against doing so because MathJax supports commands
+  like <code>\label</code>, <code>\eqref</code>, <code>\notag</code>,
+  etc. and environments
+  like <code>align</code>, <code>multiline</code>, etc. KaTeX does not
+  support them, so switching to KaTeX would break many existing
+  documents written using TeXMe or MathBin. I am going to stick with
+  MathJax for now.
+</p>
+<p>
+  Here are some useful resources:
+</p>
+<ul>
+  <li>
+    <a href="http://docs.mathjax.org/en/latest/input/tex/macros/">MathJax: Supported TeX/LaTeX commands</a>
+  </li>
+  <li>
+    <a href="https://katex.org/docs/supported.html">KaTeX: Supported Functions</a>
+  </li>
+</ul>
+
+<p><a href="https://susam.in/maze/sticking-with-mathjax.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

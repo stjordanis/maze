@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's Fascinating Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's Fascinating Maze</description>
+
+<item>
+<title>The Epic Lisp Hack</title>
+<link>https://susam.in/maze/epic-lisp-hack.html</link>
+<guid>https://susam.in/maze/epic-lisp-hack.html</guid>
+<description>
+<![CDATA[
+<p>
+  There is a wonderful story about a legendary Lisp debugging story in
+  the second chapter of the book <em>Practical Common Lisp</em> by
+  Peter Seibel. Quoting the story here:
+</p>
+<blockquote>
+  <p>
+    An even more impressive instance of remote debugging occurred on
+    NASA's 1998 Deep Space 1 mission. A half year after the space
+    craft launched, a bit of Lisp code was going to control the
+    spacecraft for two days while conducting a sequence of
+    experiments. Unfortunately, a subtle race condition in the code
+    had escaped detection during ground testing and was already in
+    space. When the bug manifested in the wild--100 million miles away
+    from Earth--the team was able to diagnose and fix the running
+    code, allowing the experiments to complete. One of the
+    programmers described it as follows:
+  </p>
+  <blockquote>
+    <p>
+      Debugging a program running on a $100M piece of hardware that is
+      100 million miles away is an interesting experience. Having a
+      read-eval-print loop running on the spacecraft proved invaluable
+      in finding and fixing the problem.
+    </p>
+  </blockquote>
+</blockquote>
+
+<p><a href="https://susam.in/maze/epic-lisp-hack.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

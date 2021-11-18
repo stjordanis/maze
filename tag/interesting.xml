@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's Interesting Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's Interesting Maze</description>
+
+<item>
+<title>Debian Releases and Toy Story</title>
+<link>https://susam.in/maze/debian-releases-and-toy-story.html</link>
+<guid>https://susam.in/maze/debian-releases-and-toy-story.html</guid>
+<description>
+<![CDATA[
+<p>
+  Did you know that Debian releases are named after characters from
+  the <em>Toy</em> Story films? I began using it with Debian 4 (Etch)
+  in 2007. It was named after Etch A Sketch, one of Andy's toys. The
+  latest release, Debian 10 (Buster), is named after Andy's pet puppy.
+</p>
+<p>
+  The name Debian itself is a portmanteau of the names Ian Murdock
+  (the creator of Debian) and Debra Lynn (his then-girlfriend, later
+  ex-wife). As a result, this name has been called a <em>curiously
+  personal name for such a community-oriented project</em>.
+</p>
+<p>
+  I was using Fedora and Ubuntu in 2007 when a member of a local Linux
+  User Group (LUG) introduced me to Debian. Its simplicity and
+  elegance, its vast package repository, and its stability and
+  robustness made me an ardent user of this distribution pretty
+  quickly. Thirteen years later, I still use Debian on my laptops,
+  Linode servers, and virtual machines. I run
+  my <a href="https://susam.in/">personal website</a> on Debian too. I
+  have got so used to <code>apt-get install</code> and the large
+  number of tools available in the Debian repositories that I keep a
+  Debian virtual machine or a remote shell handy when I am working on
+  a non-Debian system. Over these years, I have gradually moved from
+  GNOME 2 to GNOME 3 and then to Xfce 4. It really helps that Debian
+  still provides an installation CD with Xfce as the default. In case
+  anyone is interested, I have documented and shared
+  my <a href="https://github.com/susam/dotfiles/blob/master/docs/debian-setup.md">Debian
+  setup notes on GitHub</a>.
+</p>
+
+<p><a href="https://susam.in/maze/debian-releases-and-toy-story.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Zero Point Leet Seconds</title>
+<link>https://susam.in/maze/zero-point-leet-seconds.html</link>
+<guid>https://susam.in/maze/zero-point-leet-seconds.html</guid>
+<description>
+<![CDATA[
+<p>
+  While computing certain round-trip times, here is a number I came
+  across that is not easy to forget: It takes light 0.1337 seconds to
+  travel once around the Earth's equator via vacuum or air. Let me
+  repeat that. It takes light "zero point leet" seconds to travel once
+  around the equator.
+</p>
+<p>
+  The equatorial radius of the Earth is about 6378.137 km. The
+  equatorial circumference of the Earth then is about 40075 km. The
+  speed of light in vacuum is 299792.458 km/s by definition. The speed
+  of light in air is about 299705 km/s. Therefore, it takes light
+  about 40075/299792.458 seconds in vacuum and about 40075/299705
+  seconds in air to travel once around the equator. Both values can be
+  written as 0.1337 seconds accurate up to 4 decimal places.
+</p>
+
+<p><a href="https://susam.in/maze/zero-point-leet-seconds.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Fork Bunny</title>
+<link>https://susam.in/maze/fork-bunny.html</link>
+<guid>https://susam.in/maze/fork-bunny.html</guid>
+<description>
+<![CDATA[
+<p>
+  Have a close look at this line of shell command that can be executed
+  on Bash, Zsh, and most POSIX or POSIX-like shells:
+</p>
+<pre><code>: () { : | : & } ; :</code></pre>
+<p>
+  Beware! Don't execute it on your system without understanding the
+  consequences completely. If the command above looks puzzling, that
+  is because it is deliberately obfuscated. Let us simplify it.
+</p>
+<p>
+  The <code>:</code> is a function name. It could very well have
+  been <code>f</code>. Let us replace <code>:</code>
+  with <code>f</code> and see what the code now looks like.
+</p>
+<pre><code>f () { f | f & } ; f</code></pre>
+<p>
+Now it looks familiar. We have two commands separated by a semicolon.
+Written in a more legible manner, the code would look like this:
+</p>
+<pre>
+<code>f()
+{
+    f | f &
+}
+
+f</code>
+</pre>
+<p>
+  It creates a function <code>f</code> and then executes it. This
+  function calls itself twice recursively. The control
+  operator <code>&</code> executes the recursive calls
+  to <code>f</code> asynchronously, i.e., in the background. The
+  number of instances of the function executing keeps growing
+  exponentially thereby depleting CPU cycles and memory. The system is
+  rendered unusable soon.
+</p>
+<p>
+  This type of denial-of-service attack by self-replication is also
+  known as a <em>fork bunny</em> which is a specific type
+  of <em>wabbit</em>. See the following entry in the Jargon File for
+  more information on
+  this: <a href="http://catb.org/~esr/jargon/html/W/wabbit.html">wabbit</a>.
+</p>
+
+<p><a href="https://susam.in/maze/fork-bunny.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 11 Jun 2006 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>

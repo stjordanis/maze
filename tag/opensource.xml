@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Susam's OpenSource Maze</title>
+<link>https://susam.in/maze/</link>
+<atom:link href="https://susam.in/maze/rss.xml"
+           rel="self" type="application/rss+xml"/>
+<description>Feed from Susam's OpenSource Maze</description>
+
+<item>
+<title>Hacktoberfest Spam</title>
+<link>https://susam.in/maze/hacktoberfest-spam.html</link>
+<guid>https://susam.in/maze/hacktoberfest-spam.html</guid>
+<description>
+<![CDATA[
+<p>
+  I received two pull requests for two of my projects on GitHub today.
+  I am the author of one and the maintainer of the other.
+</p>
+<p>
+  At first, the pull requests did not make sense at all. One of them
+  made minor changes to a README, e.g., changing "this book" to "the
+  book". It did not fix a typo or grammatical error. It merely chose a
+  word different from the one I had chosen. In fact, I preferred "this
+  book", so the pull request (PR) was inconsistent with my preference.
+  There was no explanation whatsoever regarding why this change was
+  warranted. Then I looked at the pull request author's profile and
+  found that the same person had submitted several such trivial pull
+  requests to other projects too, all of them changing "this" to "the"
+  at some places in various README files.
+</p>
+<p>
+  It all began to make sense when I looked at the calendar. It was Oct
+  01. This looked like pull request spam due to Hacktoberfest. For
+  now, I just labelled the pull requests as "invalid" (as suggested by
+  the <a href="https://hacktoberfest.digitalocean.com/faq/">Hacktoberfest
+  FAQ</a>), closed the pull requests, and moved on.
+</p>
+<p>
+  Like all good things created with good intentions on the Internet,
+  spam is hurting this event and bringing bad reputation to it. The
+  possibility of large scale, endless spam should be worked into the
+  design of any new Internet-based event or solution.
+</p>
+
+<p><a href="https://susam.in/maze/hacktoberfest-spam.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Non-Commercial Licenses Are Non-Free Licenses</title>
+<link>https://susam.in/maze/non-commercial-licenses-are-non-free-licenses.html</link>
+<guid>https://susam.in/maze/non-commercial-licenses-are-non-free-licenses.html</guid>
+<description>
+<![CDATA[
+<p>
+  I have had to explain this a couple of times on various forums, so I
+  thought it would be good to write a post about it and explain why
+  non-commercial licenses are non-free licenses. Some examples of
+  non-commercial licenses
+  are
+  <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a>,
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a>, and
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC
+  BY-NC-ND</a>. These are all non-free licenses.
+</p>
+<p>
+  The fact that non-commercial licenses happen to be non-free licenses
+  appear to be counterintuitive to some. Isn't prohibiting the usage
+  of some artefacts for commercial purpose good for free artefacts?
+  Maybe it is. May be it is not. That is irrelevant while deciding
+  whether a license is considered free or not. What is relevant though
+  is whether the license satisfies the principles laid out in some of
+  the widely followed principles of freedom in creative work.
+  Especially in the context of software, such as for licensing
+  artefacts related to software development and usage, we have a few
+  widely accepted guidelines that we can refer to:
+</p>
+<ul>
+  <li>
+    <a href="https://www.gnu.org/philosophy/free-sw.en.html">Free
+    Software Definition (FSD)</a>
+  </li>
+  <li>
+    <a href="https://www.debian.org/social_contract">Debian Free
+    Software Guidelines (DFSG)</a>
+  </li>
+  <li>
+    <a href="https://opensource.org/osd">Open Source Definition
+    (OSD)</a>
+  </li>
+</ul>
+<p>
+  Note that when we say "free" here, we mean free as in speech, not
+  free as in beer. Prohibiting commercial usage of some work violates
+  these principles of software freedom mentioned in the documents
+  referenced above:
+</p>
+<ul>
+  <li>
+    <p>
+      Freedom 0 of the Free Software Definition (FSD): The freedom to
+      run the program as you wish, for any purpose (freedom 0).
+    </p>
+  </li>
+  <li>
+    <p>
+      Point 6 of the Debian Free Software Guidelines (DFSG): No
+      Discrimination Against Fields of Endeavor: The license must not
+      restrict anyone from making use of the program in a specific
+      field of endeavor. For example, it may not restrict the program
+      from being used in a business, or from being used for genetic
+      research.
+    </p>
+  </li>
+  <li>
+    <p>
+      Point 6 of the Open Source Definition (OSD): No Discrimination
+      Against Fields of Endeavor: The license must not restrict anyone
+      from making use of the program in a specific field of endeavor.
+      For example, it may not restrict the program from being used in
+      a business, or from being used for genetic research.
+    </p>
+  </li>
+</ul>
+<p>
+  By the way, the OSD was originally derived from the DFSG. That is
+  why the OSD looks quite similar to the DFSG.
+</p>
+<p>
+  So what does this all mean and why should you care? The
+  non-commercial licenses are good at doing what they are meant to do,
+  that is, prevent commercial exploitation of your work. If that is
+  what you want, the non-commercial licenses are perfect for you. But
+  it is worth noting that restricting non-commercial usage does come
+  at the cost of unhindered collaboration. For example, a work
+  licensed under CC BY-NC, CC BY-NC-SA, or CC BY-NC-ND cannot be
+  remixed, adapted, or relicensed with work licensed under the CC BY
+  or CC BY-SA.
+</p>
+<p>
+  If you want unhindered
+  collaboration, <a href="https://creativecommons.org/licenses/by/4.0/">CC
+  BY</a> is one of the most permissive licenses available from
+  Creative Commons. There is
+  also <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>
+  which gets as close to public domain as
+  possible. <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC
+  BY-SA</a> is another good option if you want to ensure that one
+  cannot remix your work into some proprietary work and redistribute
+  it. But note that even CC BY-SA requires that you do not impose any
+  additional restrictions to the license terms. That is, even CC BY-SA
+  allows commercial usage and is incompatible with any non-commercial
+  license.
+</p>
+
+<p><a href="https://susam.in/maze/non-commercial-licenses-are-non-free-licenses.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Immediate SourceForge Tracker Notification</title>
+<link>https://susam.in/maze/immediate-sourceforge-tracker-notification.html</link>
+<guid>https://susam.in/maze/immediate-sourceforge-tracker-notification.html</guid>
+<description>
+<![CDATA[
+<p>
+  Here are the steps I followed to prevent the tracker email notification
+  sent to a SourceForge mailing list address from being held for
+  moderation.
+</p>
+<ol>
+  <li>
+    Navigate to <em>Mailman admin</em> &gt; <em>Privacy options</em>
+    &gt; <em>Sender filters</em>. Then
+    add <code>noreply@sourceforge.net</code> to the list of non-member
+    addresses whose postings should be automatically accepted.
+  </li>
+  <li>
+    Navigate to <em>Mailman admin</em> &gt; <em>Privacy options</em>
+    &gt; <em>Recepient filters</em>. Then
+    add <code>noreply@sourceforge.net</code> to alias names (regexps)
+    which qualify as explicit to or cc destination names for this
+    list.
+  </li>
+</ol>
+<p>
+  The first step was necessary because all emails sent by tracker
+  has <code>noreply@sourceforge.net</code> as the <em>From</em> address.
+</p>
+<p>
+  The second step was necessary because all emails sent by tracker
+  has <code>noreply@sourceforge.net</code> as the <em>To</em> address.
+</p>
+
+<p><a href="https://susam.in/maze/immediate-sourceforge-tracker-notification.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>OSVDB in GSoC</title>
+<link>https://susam.in/maze/osvdb-in-gsoc.html</link>
+<guid>https://susam.in/maze/osvdb-in-gsoc.html</guid>
+<description>
+<![CDATA[
+<p>
+  The Open Source Vulnerability Database (OSVDB) is participating in
+  Google Summer of Code (GSoC) this year. I have been contributing to
+  OSVDB as a <em>vulnerability mangler</em> since Aug 2006 and
+  analyzing new vulnerabilities being published by security
+  researchers, adding more details to them depending on the nature and
+  severity of the vulnerabilities, and cataloging them. Our internal
+  systems for cataloging vulnerabilities could use some help from more
+  contributors, so it is great that OSVDB is participating in GSoC
+  this year.
+</p>
+<p>
+  Last month we selected some potential contributors from a pile of
+  applications. One of them is Timothy F. Tutt Jr. who will be doing
+  the Researcher Confidence Project for OSVDB.
+</p>
+<p>
+  In the commenting system for OSVDB contributors, Brian Martin a.k.a.
+  Jericho, one of the project leaders, wrote this comment that I found
+  quite funny:
+</p>
+<blockquote>
+  Don't think I need to argue how big this is to me, given the time I
+  spend arguing with researchers and vendors. If we approve this and I
+  am not the mentor, I will feed Jake to a woodchipper.
+</blockquote>
+
+<p><a href="https://susam.in/maze/osvdb-in-gsoc.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Fri, 27 Apr 2007 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Volunteering for OSVDB</title>
+<link>https://susam.in/maze/volunteering-for-osvdb.html</link>
+<guid>https://susam.in/maze/volunteering-for-osvdb.html</guid>
+<description>
+<![CDATA[
+<p>
+  I am now an active Open Source Vulnerability Database (OSVDB)
+  volunteer. I joined it on 06 Jun 2006. Although I enrolled as a
+  volunteer there around 3 weeks, I worked on a vulnerability for the
+  first time today. The vulnerability I picked for my first
+  contribution
+  was <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=2006-2971">0verkill
+  recv_packet() Function UDP Handling Overflow DoS</a>. This is an
+  integer underflow error in a Linux based gaming daemon called
+  0verkill. It could be exploited to launch DoS attacks by sending UDP
+  packets of size less than 12 bytes to the 0verkill daemon. An
+  example exploit code is available
+  at <a href="http://web.archive.org/web/20201208191904/https://www.securityfocus.com/archive/1/436659/100/0/threaded">this
+  Bugtraq thread</a>.
+</p>
+<p>
+  OSVDB is a project of the Open Security Foundation. Its goal is to
+  provide accurate, unbiased information about security
+  vulnerabilities in computerized equipment. The core of OSVDB is a
+  relational database which ties various information about security
+  vulnerabilities into a common, cross-referenced data source.
+</p>
+<p>
+  In OSVDB, vulnerability reports, advisories, and exploits posted in
+  various security lists enter the database as new entries. Each new
+  entry contains only a title and links to entries of the same
+  vulnerability in other security lists. However, a new entry does not
+  contain any detailed description of the vulnerability. After the new
+  entries are thoroughly scrutinized, analyzed, and refined by us, we
+  add vulnerability description, technical description, solution
+  description, manual testing notes, etc. Then these details on each
+  entry are reviewed by other members of OSVDB, further refined if
+  necessary, and then marked as stable entries. Once an entry for a
+  vulnerability becomes stable, the detailed information for it
+  appears on the page for the entry. One of the wonderful things that
+  OSVDB brings to the world of security research is that each entry
+  published on the OSVDB website has an extensive and almost
+  exhaustive list of cross-references linking together all information
+  about the vulnerability available on various security databases.
+</p>
+
+<p><a href="https://susam.in/maze/volunteering-for-osvdb.html">Read on website</a></p>
+]]>
+</description>
+<pubDate>Sat, 24 Jun 2006 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>
